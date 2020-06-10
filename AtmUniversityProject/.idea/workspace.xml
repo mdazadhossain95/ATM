@@ -1,70 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/AZAD_HOSSAIN.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_base.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_49_bin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AtmUniversityProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AtmUniversityProject/sample/Controller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AtmUniversityProject/sample/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AtmUniversityProject/sample/sample.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customer/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customer/Customermain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customer/customer.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/DatabaseConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/dictionaries/AZAD_HOSSAIN.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/libraries/mysql_connector_java_5_1_49_bin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/ATM Managment System.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/out/production/ATM Managment System/META-INF/ATM Managment System.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/out/production/ATM Managment System/Pictures/banklogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/out/production/ATM Managment System/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/out/production/ATM Managment System/sample/DatabaseConnector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/out/production/ATM Managment System/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/out/production/ATM Managment System/sample/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/src/Pictures/banklogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pictures/banklogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/src/SimpleAwtGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimpleAwtGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/src/sample/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/src/sample/DatabaseConnector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/src/sample/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM Managment System/src/sample/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/ATM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/out/production/ATM/sample/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/src/sample/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/src/sample/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ATM/src/sample/sample.fxml" beforeDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -296,7 +233,7 @@
       <workItem from="1591079526444" duration="2021000" />
       <workItem from="1591115979342" duration="32024000" />
       <workItem from="1591339983235" duration="33656000" />
-      <workItem from="1591726535757" duration="6452000" />
+      <workItem from="1591726535757" duration="6458000" />
     </task>
     <servers />
   </component>
