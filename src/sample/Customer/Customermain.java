@@ -1,4 +1,4 @@
-package sample;
+package sample.Customer;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,13 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Customermain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("customer.fxml"));
         primaryStage.setTitle("ATM");
-        primaryStage.setScene(new Scene(root, 750, 700));
+        primaryStage.setScene(new Scene(root, 600, 350));
         primaryStage.show();
     }
 
@@ -21,3 +21,4 @@ public class Main extends Application {
         launch(args);
     }
 }
+
