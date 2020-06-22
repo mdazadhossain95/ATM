@@ -64,8 +64,6 @@ public class CustomerController implements Initializable {
 
     @FXML
     void insert(ActionEvent event) throws SQLException {
-//        Database.DatabaseConnector databaseConnector = new Database.DatabaseConnector();
-//        Connection connection = databaseConnector.getConnection();
         connection = DatabaseConnector.getConnection();
         String sql = "INSERT INTO customer (custid,firstname,middlename,lastname,address,phonenumber,occupation,cardnumber,password) VALUES (?,?,?,?,?,?,?,?,?)";
 
