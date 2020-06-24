@@ -1,0 +1,32 @@
+@FXML
+void WithdrawMoney(ActionEvent event) throws SQLException {
+        try {
+            if (withdrawamount.getText().isEmpty() || Integer.parseInt(withdrawamount.getText()) < 0) {
+                System.out.println("Please Enter A Valid Amount");
+            } else {
+                connection = DatabaseConnector.getConnection();
+                PreparedStatement pst = null;
+                resultSet = null;
+                int balance;
+                pst = connection.prepareStatement("SELECT * FROM account WHERE cardnumber = '"+cardnumber.getText()+"'");
+                resultSet = pst.executeQuery();
+                while (resultSet.next()) {
+                    int NewBalance = (resultSet.getInt("lastamount") - Integer.parseInt(withdrawamount.getText()));
+                    if (NewBalance < 0) {
+                        System.out.println("Your Account Balance Is Low");
+                    } else {
+                        pst = con.prepareStatement("UPDATE account SET lastamount =? WHERE cardnumber = '"+cardnumber.getText()+"'");
+                        pst.setInt(1, NewBalance);
+                        pst.executeUpdate();
+                        System.out.println("Transaction Successfull");
+                    }
+                }
+                pst.close();
+                resultSet.close();
+                connection.close();
+            }
+        } catch (NumberFormatException | SQLException e) {
+            System.out.println("Invalid Database Or Number Format");
+        }
+        System.out.println("");
+    }
