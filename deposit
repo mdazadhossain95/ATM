@@ -1,0 +1,31 @@
+ @FXML
+ void Deposit(ActionEvent event) throws SQLException {
+        try {
+            if (depositamount.getText().isEmpty() || Integer.parseInt(depositamount.getText()) < 0) {
+                System.out.println("Please Enter A Valid Amount");
+            } else {
+                connection = DatabaseConnector.getConnection();
+                PreparedStatement pst = null;
+                resultSet = null;
+                pst = con.prepareStatement("SELECT * FROM account WHERE cardnumber = '"+cardnumber.getText()+"'");
+                resultSet = pst.executeQuery();
+                while (rs.next()) {
+                    int NewBalance = (resultSet.getInt("lastamount") + Integer.parseInt(depositamount.getText()));
+                    pst = connection.prepareStatement("UPDATE account SET lastamount =? WHERE cardnumber = '"+cardnumber.getText()+"'");
+                    pst.setInt(1, NewBalance);
+                    pst.executeUpdate();
+                }
+                System.out.println("Cash Has Been Deposited");
+                pst.close();
+                resultSet.close();
+                connection.close();
+            }
+        } catch (NumberFormatException | SQLException e) {
+            System.out.println("Invalid Database Or Number Format");
+        }
+        System.out.println("");
+    }
+
+
+
+
