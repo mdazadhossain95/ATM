@@ -3,6 +3,7 @@
     <words>
       <w>cardnumber</w>
       <w>lastamount</w>
+      <w>successfull</w>
     </words>
   </dictionary>
 </component>

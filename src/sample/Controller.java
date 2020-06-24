@@ -23,8 +23,6 @@ public class Controller implements Initializable {
 
 
     @FXML
-    private Label examplelabel;
-    @FXML
     private Button two;
 
     @FXML
@@ -147,6 +145,9 @@ public class Controller implements Initializable {
     @FXML
     private TextField lastamountshowfield;
 
+    @FXML
+    private Button withdrawsubmit;
+
 
     @FXML
     void backbutton(ActionEvent event) {
@@ -180,6 +181,7 @@ public class Controller implements Initializable {
         lastamountlabel9.setVisible(false);
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
+        withdrawsubmit.setVisible(false);
 
 
     }
@@ -249,6 +251,7 @@ public class Controller implements Initializable {
         lastamountlabel9.setVisible(false);
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
+        withdrawsubmit.setVisible(false);
 
     }
 
@@ -311,6 +314,7 @@ public class Controller implements Initializable {
                 lastamountlabel9.setVisible(false);
                 depositsubmitnutton2.setVisible(false);
                 lastamountshowfield.setVisible(false);
+                withdrawsubmit.setVisible(false);
             } else {
                 System.out.println("cardnumber or password is not correct");
                 password.setVisible(true);
@@ -362,6 +366,7 @@ public class Controller implements Initializable {
                 lastamountlabel9.setVisible(false);
                 depositsubmitnutton2.setVisible(false);
                 lastamountshowfield.setVisible(false);
+                withdrawsubmit.setVisible(false);
             } catch (SQLException e) {
                 System.out.println("have some problem");
             }
@@ -408,6 +413,7 @@ public class Controller implements Initializable {
                 lastamountlabel9.setVisible(true);
                 depositsubmitnutton2.setVisible(true);
                 lastamountshowfield.setVisible(true);
+                withdrawsubmit.setVisible(false);
             } catch (SQLException e) {
                 System.out.println("have some problem");
             }
@@ -441,6 +447,7 @@ public class Controller implements Initializable {
         lastamountlabel9.setVisible(false);
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
+        withdrawsubmit.setVisible(false);
 
 
     }
@@ -473,6 +480,7 @@ public class Controller implements Initializable {
         lastamountlabel9.setVisible(false);
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
+        withdrawsubmit.setVisible(true);
 
     }
 
@@ -502,6 +510,7 @@ public class Controller implements Initializable {
         lastamountlabel9.setVisible(false);
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
+        withdrawsubmit.setVisible(false);
 
     }
 
@@ -531,6 +540,7 @@ public class Controller implements Initializable {
         lastamountlabel9.setVisible(false);
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
+        withdrawsubmit.setVisible(false);
 
 
     }
@@ -569,6 +579,7 @@ public class Controller implements Initializable {
                 lastamountlabel9.setVisible(false);
                 depositsubmitnutton2.setVisible(false);
                 lastamountshowfield.setVisible(false);
+                withdrawsubmit.setVisible(false);
             } else {
                 System.out.println("have some problem");
 
@@ -582,77 +593,121 @@ public class Controller implements Initializable {
     @FXML
     void depositbuttonsubmit(ActionEvent actionEvent) throws SQLException {
 
-        String a = lastamountfield.getText();
-        String b = depositamount.getText();
-        String amount = String.valueOf(a+b);
-
-        connection = DatabaseConnector.getConnection();
-        String sql = "UPDATE account SET lastamount = amount and amount = '"+depositamount.getText()+"' WHERE cardnumber = '"+cardnumber.getText()+"'";
         try {
-
-
-
-            pst = (PreparedStatement) connection.prepareStatement(sql);
-
-//            pst.setString(2, depositamount.getText());
-//            pst.setString(1, String.valueOf(amount));
-//            pst.setString(3, cardnumber.getText());
-            int numRowsChanged = pst.executeUpdate();
-
-            password.setVisible(false);
-            checkBalance.setVisible(true);
-            depositMoney.setVisible(true);
-            balanceTransfer.setVisible(true);
-            withdrawBalance.setVisible(true);
-            changepassword.setVisible(true);
-            information.setVisible(true);
-            password.setVisible(false);
-            label2.setVisible(false);
-            Withdrawamount.setVisible(false);
-            depositamount.setVisible(false);
-            backbutton.setVisible(false);
-            oldpasswordlabel3.setVisible(false);
-            newpasswordlabel4.setVisible(false);
-            retypepasswordlabel5.setVisible(false);
-            oldpasswordfield.setVisible(false);
-            newpasswordfield.setVisible(false);
-            retypepasswordfield.setVisible(false);
-            accountnumberfield.setVisible(false);
-            transfermoneyfield.setVisible(false);
-            tranferpasswordfield.setVisible(false);
-            accountnumberlabel6.setVisible(false);
-            transferamountlabel7.setVisible(false);
-            transferpasswordlabel8.setVisible(false);
-            changepasssubmitbutton1.setVisible(false);
-            lastamountlabel9.setVisible(false);
-            depositsubmitnutton2.setVisible(false);
-            lastamountshowfield.setVisible(false);
+            if (depositamount.getText().isEmpty() || Integer.parseInt(depositamount.getText()) < 0) {
+                System.out.println("Please Enter A Valid Amount");
+            } else {
+                connection = DatabaseConnector.getConnection();
+                PreparedStatement pst = null;
+                resultSet = null;
+                pst = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber = '" + cardnumber.getText() + "'");
+                resultSet = pst.executeQuery();
+                while (resultSet.next()) {
+                    int NewBalance = (resultSet.getInt("lastamount") + Integer.parseInt(depositamount.getText()));
+                    pst = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount =? WHERE cardnumber = '" + cardnumber.getText() + "'");
+                    pst.setInt(1, NewBalance);
+                    pst.executeUpdate();
+                }
+                System.out.println("Cash Has Been Deposited");
+                password.setVisible(false);
+                checkBalance.setVisible(true);
+                depositMoney.setVisible(true);
+                balanceTransfer.setVisible(true);
+                withdrawBalance.setVisible(true);
+                changepassword.setVisible(true);
+                information.setVisible(true);
+                password.setVisible(false);
+                label2.setVisible(false);
+                Withdrawamount.setVisible(false);
+                depositamount.setVisible(false);
+                backbutton.setVisible(false);
+                oldpasswordlabel3.setVisible(false);
+                newpasswordlabel4.setVisible(false);
+                retypepasswordlabel5.setVisible(false);
+                oldpasswordfield.setVisible(false);
+                newpasswordfield.setVisible(false);
+                retypepasswordfield.setVisible(false);
+                accountnumberfield.setVisible(false);
+                transfermoneyfield.setVisible(false);
+                tranferpasswordfield.setVisible(false);
+                accountnumberlabel6.setVisible(false);
+                transferamountlabel7.setVisible(false);
+                transferpasswordlabel8.setVisible(false);
+                changepasssubmitbutton1.setVisible(false);
+                lastamountlabel9.setVisible(false);
+                depositsubmitnutton2.setVisible(false);
+                lastamountshowfield.setVisible(false);
+                withdrawsubmit.setVisible(false);
+                pst.close();
+                resultSet.close();
+                connection.close();
+            }
         } catch (SQLException e) {
-            System.out.println("have some problem");
+            System.out.println("Invalid Database Or Number Format");
         }
-
-//        String cardnumber1 = cardnumber.getText();
-//
-//        try {
-//            statement = connection.createStatement();
-//            sql = "SELECT updatebalance FROM account WHERE cardnumber = '" + cardnumber1 + "';";
-//            statement.executeQuery(sql);
-//
-//            System.out.println(statement.executeUpdate(sql));
-//            lastamountfield.setText(Integer.toString(statement.executeUpdate(sql)));
-//
-
-//            while (resultSet.next()) {
-//                lastamountfield.setText(resultSet.getString(3));
-//                System.out.println("ok");
-//
-//            }
-
-//        } catch (SQLException e) {
-//            JOptionPane.showMessageDialog(null, e);
-//
-//        }
-
+        System.out.println("");
     }
-    
+
+    @FXML
+    void withdrawsubmitbutton(ActionEvent event) throws SQLException {
+
+        try {
+            if (Withdrawamount.getText().isEmpty() || Integer.parseInt(Withdrawamount.getText()) < 0) {
+                System.out.println("Please Enter A Valid Amount");
+            } else {
+                connection = DatabaseConnector.getConnection();
+                PreparedStatement pst = null;
+                resultSet = null;
+                int balance;
+                pst = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber = '" + cardnumber.getText() + "'");
+                resultSet = pst.executeQuery();
+                while (resultSet.next()) {
+                    int NewBalance = (resultSet.getInt("lastamount") - Integer.parseInt(Withdrawamount.getText()));
+                    if (NewBalance < 0) {
+                        System.out.println("Your Account Balance Is Low");
+                    } else {
+                        pst = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount =? WHERE cardnumber = '" + cardnumber.getText() + "'");
+                        pst.setInt(1, NewBalance);
+                        pst.executeUpdate();
+                        System.out.println("Transaction Successfull");
+                    }
+                }
+                password.setVisible(false);
+                checkBalance.setVisible(true);
+                depositMoney.setVisible(true);
+                balanceTransfer.setVisible(true);
+                withdrawBalance.setVisible(true);
+                changepassword.setVisible(true);
+                information.setVisible(true);
+                password.setVisible(false);
+                label2.setVisible(false);
+                Withdrawamount.setVisible(false);
+                depositamount.setVisible(false);
+                backbutton.setVisible(false);
+                oldpasswordlabel3.setVisible(false);
+                newpasswordlabel4.setVisible(false);
+                retypepasswordlabel5.setVisible(false);
+                oldpasswordfield.setVisible(false);
+                newpasswordfield.setVisible(false);
+                retypepasswordfield.setVisible(false);
+                accountnumberfield.setVisible(false);
+                transfermoneyfield.setVisible(false);
+                tranferpasswordfield.setVisible(false);
+                accountnumberlabel6.setVisible(false);
+                transferamountlabel7.setVisible(false);
+                transferpasswordlabel8.setVisible(false);
+                changepasssubmitbutton1.setVisible(false);
+                lastamountlabel9.setVisible(false);
+                depositsubmitnutton2.setVisible(false);
+                lastamountshowfield.setVisible(false);
+                withdrawsubmit.setVisible(false);
+                pst.close();
+                resultSet.close();
+                connection.close();
+            }
+        } catch (NumberFormatException | SQLException e) {
+            System.out.println("Invalid Database Or Number Format");
+        }
+        System.out.println("");
+    }
 }
