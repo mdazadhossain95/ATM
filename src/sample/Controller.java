@@ -148,6 +148,9 @@ public class Controller implements Initializable {
     @FXML
     private Button withdrawsubmit;
 
+    @FXML
+    private Button transferbutton;
+
 
     @FXML
     void backbutton(ActionEvent event) {
@@ -182,6 +185,7 @@ public class Controller implements Initializable {
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
+        transferbutton.setVisible(false);
 
 
     }
@@ -252,6 +256,7 @@ public class Controller implements Initializable {
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
+        transferbutton.setVisible(false);
 
     }
 
@@ -315,6 +320,7 @@ public class Controller implements Initializable {
                 depositsubmitnutton2.setVisible(false);
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
+                transferbutton.setVisible(false);
             } else {
                 System.out.println("cardnumber or password is not correct");
                 password.setVisible(true);
@@ -367,6 +373,7 @@ public class Controller implements Initializable {
                 depositsubmitnutton2.setVisible(false);
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
+                transferbutton.setVisible(false);
             } catch (SQLException e) {
                 System.out.println("have some problem");
             }
@@ -414,6 +421,7 @@ public class Controller implements Initializable {
                 depositsubmitnutton2.setVisible(true);
                 lastamountshowfield.setVisible(true);
                 withdrawsubmit.setVisible(false);
+                transferbutton.setVisible(false);
             } catch (SQLException e) {
                 System.out.println("have some problem");
             }
@@ -448,6 +456,7 @@ public class Controller implements Initializable {
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
+        transferbutton.setVisible(true);
 
 
     }
@@ -481,6 +490,7 @@ public class Controller implements Initializable {
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(true);
+        transferbutton.setVisible(false);
 
     }
 
@@ -511,6 +521,7 @@ public class Controller implements Initializable {
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
+        transferbutton.setVisible(false);
 
     }
 
@@ -541,6 +552,7 @@ public class Controller implements Initializable {
         depositsubmitnutton2.setVisible(false);
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
+        transferbutton.setVisible(false);
 
 
     }
@@ -580,6 +592,7 @@ public class Controller implements Initializable {
                 depositsubmitnutton2.setVisible(false);
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
+                transferbutton.setVisible(false);
             } else {
                 System.out.println("have some problem");
 
@@ -638,6 +651,7 @@ public class Controller implements Initializable {
                 depositsubmitnutton2.setVisible(false);
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
+                transferbutton.setVisible(false);
                 pst.close();
                 resultSet.close();
                 connection.close();
@@ -701,6 +715,7 @@ public class Controller implements Initializable {
                 depositsubmitnutton2.setVisible(false);
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
+                transferbutton.setVisible(false);
                 pst.close();
                 resultSet.close();
                 connection.close();
@@ -710,4 +725,92 @@ public class Controller implements Initializable {
         }
         System.out.println("");
     }
+
+    @FXML
+    void transfersubmitbutton(ActionEvent event) {
+        try {
+            if (transfermoneyfield.getText().isEmpty() || Integer.parseInt(transfermoneyfield.getText()) < 0 || tranferpasswordfield.getText().isEmpty() || accountnumberfield.getText().isEmpty()) {
+                System.out.println("Please Fill Up Everything Correctly.");
+            } else {
+                connection = DatabaseConnector.getConnection();
+                PreparedStatement pst = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber = '" + cardnumber.getText() + "' and password = '" + tranferpasswordfield.getText() + "' ");
+                resultSet = pst.executeQuery();
+                if (resultSet.next()) {
+                    int newbalance = resultSet.getInt("lastamount") - Integer.parseInt(transfermoneyfield.getText());
+                    if (newbalance < 0) {
+                        System.out.println("You Dont Have Enough Money To Transfer.");
+                        pst.close();
+                        resultSet.close();
+                    } else {
+                        pst = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount = ? WHERE cardnumber = '" + cardnumber.getText() + "' ");
+                        pst.setInt(1, newbalance);
+                        pst.executeUpdate();
+                        pst.close();
+                        resultSet.close();
+                        PreparedStatement pst2 = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber = '" + cardnumber.getText() + "'");
+                        ResultSet resultSet2 = pst2.executeQuery();
+                        if (resultSet2.next()) {
+                            int receivernewbalance = resultSet2.getInt("lastamount") + Integer.parseInt(transfermoneyfield.getText());
+                            pst2 = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount =? WHERE cardnumber = '" + accountnumberfield.getText() + "' ");
+                            pst2.setInt(1, receivernewbalance);
+                            pst2.executeUpdate();
+
+                            password.setVisible(false);
+                            checkBalance.setVisible(true);
+                            depositMoney.setVisible(true);
+                            balanceTransfer.setVisible(true);
+                            withdrawBalance.setVisible(true);
+                            changepassword.setVisible(true);
+                            information.setVisible(true);
+                            password.setVisible(false);
+                            label2.setVisible(false);
+                            Withdrawamount.setVisible(false);
+                            depositamount.setVisible(false);
+                            backbutton.setVisible(false);
+                            oldpasswordlabel3.setVisible(false);
+                            newpasswordlabel4.setVisible(false);
+                            retypepasswordlabel5.setVisible(false);
+                            oldpasswordfield.setVisible(false);
+                            newpasswordfield.setVisible(false);
+                            retypepasswordfield.setVisible(false);
+                            accountnumberfield.setVisible(false);
+                            transfermoneyfield.setVisible(false);
+                            tranferpasswordfield.setVisible(false);
+                            accountnumberlabel6.setVisible(false);
+                            transferamountlabel7.setVisible(false);
+                            transferpasswordlabel8.setVisible(false);
+                            changepasssubmitbutton1.setVisible(false);
+                            lastamountlabel9.setVisible(false);
+                            depositsubmitnutton2.setVisible(false);
+                            lastamountshowfield.setVisible(false);
+                            withdrawsubmit.setVisible(false);
+                            transferbutton.setVisible(false);
+
+                            pst2.close();
+                            resultSet2.close();
+                            System.out.println("Transfer Successfull");
+                        } else {
+                            System.out.println("Card Number Invalid , Failed To Transfer.");
+                            PreparedStatement pst3 = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber ='" + cardnumber.getText() + "'");
+                            ResultSet resultSet3 = pst3.executeQuery();
+                            while (resultSet3.next()) {
+                                int addbalance = resultSet3.getInt("lastamount") + Integer.parseInt(transfermoneyfield.getText());
+                                pst3 = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount = ? WHERE cardnumber = '" + cardnumber.getText() + "'");
+                                pst3.setInt(1, addbalance);
+                                pst3.executeUpdate();
+                            }
+                            pst3.close();
+                            resultSet3.close();
+                        }
+                    }
+                } else {
+                    System.out.println("Wrong Password Transaction Failed.");
+                }
+                connection.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Invalid Database Or Number Format");
+        }
+    }
+
 }

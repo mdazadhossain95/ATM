@@ -3,7 +3,10 @@
     <words>
       <w>cardnumber</w>
       <w>lastamount</w>
+      <w>newbalance</w>
+      <w>receivernewbalance</w>
       <w>successfull</w>
+      <w>transfersubmitbutton</w>
     </words>
   </dictionary>
 </component>
