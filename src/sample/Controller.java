@@ -561,16 +561,17 @@ public class Controller implements Initializable {
     void changepassSubmitbutton(ActionEvent actionEvent) {
 
         connection = DatabaseConnector.getConnection();
-        String sql = "UPDATE customer SET password = ? WHERE cardnumber = ?";
+        String sql = "UPDATE customer SET password = '"+retypepasswordfield.getText()+"' WHERE cardnumber = '"+cardnumber.getText()+"'";
+        String sql2 = "UPDATE account SET password = '"+retypepasswordfield.getText()+"' WHERE cardnumber = '"+cardnumber.getText()+"'";
         try {
             pst = (PreparedStatement) connection.prepareStatement(sql);
-            pst.setString(1, retypepasswordfield.getText());
-            pst.setString(2, cardnumber.getText());
-
+            PreparedStatement pst2 = (PreparedStatement) connection.prepareStatement(sql2);
 
             int numRowsChanged = pst.executeUpdate();
+            int numRowsChanged2 = pst2.executeUpdate();
 
             if (resultSet.next() || oldpasswordfield.getText().equals(password.getText()) || newpasswordfield.getText().equals(retypepasswordfield.getText())) {
+
                 checkBalance.setVisible(true);
                 depositMoney.setVisible(true);
                 balanceTransfer.setVisible(true);
@@ -601,6 +602,7 @@ public class Controller implements Initializable {
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
+
     }
 
     @FXML
