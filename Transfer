@@ -1,0 +1,55 @@
+ @FXML
+    void transfersubmitbutton(ActionEvent event) {
+        try {
+            if (transfermoneyfield.getText().isEmpty() || Integer.parseInt(transfermoneyfield.getText()) < 0 || tranferpasswordfield.getText().isEmpty() || accountnumberfield.getText().isEmpty()) {
+                System.out.println("Please Fill Up Everything Correctly.");
+            } else {
+                connection = DatabaseConnector.getConnection();
+                PreparedStatement pst = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber = '" + cardnumber.getText() + "' and password = '" + tranferpasswordfield.getText() + "' ");
+                resultSet = pst.executeQuery();
+                if (resultSet.next()) {
+                    int newbalance = resultSet.getInt("lastamount") - Integer.parseInt(transfermoneyfield.getText());
+                    if (newbalance < 0) {
+                        System.out.println("You Dont Have Enough Money To Transfer.");
+                        pst.close();
+                        resultSet.close();
+                    } else {
+                        pst = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount = ? WHERE cardnumber = '" + cardnumber.getText() + "' ");
+                        pst.setInt(1, newbalance);
+                        pst.executeUpdate();
+                        pst.close();
+                        resultSet.close();
+                        PreparedStatement pst2 = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber = '" + cardnumber.getText() + "'");
+                        ResultSet resultSet2 = pst2.executeQuery();
+                        if (resultSet2.next()) {
+                            int receivernewbalance = resultSet2.getInt("lastamount") + Integer.parseInt(transfermoneyfield.getText());
+                            pst2 = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount =? WHERE cardnumber = '" + accountnumberfield.getText() + "' ");
+                            pst2.setInt(1, receivernewbalance);
+                            pst2.executeUpdate();
+                             pst2.close();
+                            resultSet2.close();
+                            System.out.println("Transfer Successfull");
+                        } else {
+                            System.out.println("Card Number Invalid , Failed To Transfer.");
+                            PreparedStatement pst3 = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber ='" + cardnumber.getText() + "'");
+                            ResultSet resultSet3 = pst3.executeQuery();
+                            while (resultSet3.next()) {
+                                int addbalance = resultSet3.getInt("lastamount") + Integer.parseInt(transfermoneyfield.getText());
+                                pst3 = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount = ? WHERE cardnumber = '" + cardnumber.getText() + "'");
+                                pst3.setInt(1, addbalance);
+                                pst3.executeUpdate();
+                            }
+                            pst3.close();
+                            resultSet3.close();
+                        }
+                    }
+                } else {
+                    System.out.println("Wrong Password Transaction Failed.");
+                }
+                connection.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Invalid Database Or Number Format");
+        }
+    }
+                            
