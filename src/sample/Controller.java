@@ -31,6 +31,10 @@ public class Controller implements Initializable {
 
     @FXML
     private AnchorPane AnchorPane;
+
+    @FXML
+    private Button one;
+
     @FXML
     private Button two;
 
@@ -58,8 +62,7 @@ public class Controller implements Initializable {
     @FXML
     private Button nine;
 
-    @FXML
-    private Button one;
+
 
     @FXML
     private Button done;
@@ -332,6 +335,7 @@ public class Controller implements Initializable {
     @FXML
     void clearbutton(ActionEvent event) {
         password.clear();
+
 
     }
 
@@ -651,13 +655,14 @@ public class Controller implements Initializable {
         String sql = "UPDATE customer SET password = '"+retypepasswordfield.getText()+"' WHERE cardnumber = '"+cardnumber.getText()+"'";
         String sql2 = "UPDATE account SET password = '"+retypepasswordfield.getText()+"' WHERE cardnumber = '"+cardnumber.getText()+"'";
         try {
+//            while(oldpasswordfield.getText() != null || newpasswordfield.getText() != null || retypepasswordfield.getText() != null)
             pst = (PreparedStatement) connection.prepareStatement(sql);
             PreparedStatement pst2 = (PreparedStatement) connection.prepareStatement(sql2);
 
             int numRowsChanged = pst.executeUpdate();
             int numRowsChanged2 = pst2.executeUpdate();
 
-            if (resultSet.next() || oldpasswordfield.getText().equals(password.getText()) || newpasswordfield.getText().equals(retypepasswordfield.getText())) {
+            if (resultSet.next() || oldpasswordfield.getText().equals(password.getText()) || newpasswordfield.getText().equals(retypepasswordfield.getText()) ) {
 
                 checkBalance.setVisible(true);
                 depositMoney.setVisible(true);
@@ -686,7 +691,7 @@ public class Controller implements Initializable {
                 retypepasswordfield.clear();
                 done.setVisible(false);
             } else {
-                System.out.println("have some problem");
+                System.out.println("Please fill your password correctly");
 
 
             }

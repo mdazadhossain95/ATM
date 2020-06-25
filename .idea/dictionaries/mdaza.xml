@@ -4,6 +4,8 @@
       <w>cancelbutton</w>
       <w>cardnumber</w>
       <w>cardnumberdone</w>
+      <w>clearbutton</w>
+      <w>enterbutton</w>
       <w>lastamount</w>
       <w>newbalance</w>
       <w>receivernewbalance</w>

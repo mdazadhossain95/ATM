@@ -16,7 +16,12 @@
 
 <AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <GridPane hgap="10.0" layoutX="104.0" layoutY="397.0" prefHeight="257.0" prefWidth="322.0" vgap="10.0">
+      <ImageView fitHeight="230.0" fitWidth="345.0" layoutX="98.0" layoutY="60.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Customer/background.jpg" />
+         </image>
+      </ImageView>
+        <GridPane hgap="10.0" layoutX="106.0" layoutY="305.0" prefHeight="257.0" prefWidth="322.0" vgap="10.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.20001220703125" minWidth="10.0" prefWidth="64.0000244140625" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="73.20001220703125" minWidth="10.0" prefWidth="63.7999755859375" />
@@ -187,8 +192,6 @@
                 </Button>
             </children>
         </VBox>
-      <TextField fx:id="password" layoutX="191.0" layoutY="324.0" promptText="Enter the password" />
-      <Label layoutX="95.0" layoutY="51.0" prefHeight="271.0" prefWidth="350.0" />
       <Button fx:id="checkBalance" layoutX="304.0" layoutY="62.0" mnemonicParsing="false" onAction="#checkBalance" prefHeight="32.0" prefWidth="130.0" text="Check Balance" />
       <Button fx:id="depositMoney" layoutX="104.0" layoutY="62.0" mnemonicParsing="false" onAction="#depositMoney" prefHeight="32.0" prefWidth="130.0" text="Deposit Money" />
       <Button fx:id="balanceTransfer" layoutX="104.0" layoutY="127.0" mnemonicParsing="false" onAction="#balanceTransfer" prefHeight="31.0" prefWidth="130.0" text="Balance Transfer" />
@@ -196,18 +199,18 @@
       <Button fx:id="changepassword" layoutX="104.0" layoutY="190.0" mnemonicParsing="false" onAction="#changepassword" prefHeight="32.0" prefWidth="130.0" text="Change Password" />
       <Button fx:id="information" layoutX="305.0" layoutY="190.0" mnemonicParsing="false" onAction="#information" prefHeight="31.0" prefWidth="130.0" text="information" />
       <Button fx:id="done" layoutX="661.0" layoutY="289.0" mnemonicParsing="false" onAction="#cardnumberdone" prefHeight="32.0" prefWidth="70.0" text="Done" />
-      <Label fx:id="label1" layoutX="150.0" layoutY="63.0" prefHeight="30.0" prefWidth="223.0" text="Your Account Balance is">
+      <Label fx:id="label1" layoutX="154.0" layoutY="63.0" prefHeight="30.0" prefWidth="223.0" text="Your Account Balance is">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="checkbalanceshow" layoutX="216.0" layoutY="128.0" prefHeight="34.0" prefWidth="94.0" text="Money">
+      <Label fx:id="checkbalanceshow" layoutX="221.0" layoutY="128.0" prefHeight="34.0" prefWidth="94.0" text="Money">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="backbutton" layoutX="253.0" layoutY="254.0" mnemonicParsing="false" onAction="#backbutton" prefHeight="31.0" prefWidth="70.0" text="Back" />
-      <Label fx:id="label2" layoutX="153.0" layoutY="126.0" prefHeight="32.0" prefWidth="210.0" text="Write Your Amount">
+      <Button fx:id="backbutton" layoutX="253.0" layoutY="254.0" mnemonicParsing="false" onAction="#backbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/style.css" text="Back" />
+      <Label fx:id="label2" layoutX="160.0" layoutY="126.0" prefHeight="32.0" prefWidth="210.0" text="Write Your Amount">
          <font>
             <Font size="22.0" />
          </font>
@@ -265,12 +268,12 @@
       <TextField fx:id="lastamountshowfield" layoutX="268.0" layoutY="62.0" prefHeight="32.0" prefWidth="149.0" />
       <Button fx:id="withdrawsubmit" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#withdrawsubmitbutton" prefHeight="31.0" prefWidth="70.0" text="Submit" />
       <Button fx:id="transferbutton" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#transfersubmitbutton" prefHeight="31.0" prefWidth="70.0" text="Submit" />
-      <Label fx:id="informationlabel1" layoutX="146.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" text="If you need any kind of information" textAlignment="CENTER">
+      <Label fx:id="informationlabel1" layoutX="150.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" text="If you need any kind of information" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="informationlabel2" layoutX="219.0" layoutY="127.0" prefHeight="31.0" prefWidth="70.0" text="Please call" textAlignment="CENTER">
+      <Label fx:id="informationlabel2" layoutX="223.0" layoutY="126.0" prefHeight="31.0" prefWidth="70.0" text="Please call" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
@@ -280,5 +283,6 @@
             <Font size="15.0" />
          </font>
       </Label>
+      <TextField fx:id="password" layoutX="184.0" layoutY="226.0" promptText="Enter the password" />
     </children>
 </AnchorPane>
