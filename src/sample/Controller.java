@@ -5,23 +5,32 @@ import Database.DatabaseConnector;
 import com.mysql.jdbc.PreparedStatement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 
 import javax.swing.*;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
 
+    @FXML
+    private AnchorPane AnchorPane;
     @FXML
     private Button two;
 
@@ -51,6 +60,9 @@ public class Controller implements Initializable {
 
     @FXML
     private Button one;
+
+    @FXML
+    private Button done;
 
     @FXML
     private TextField cardnumber;
@@ -151,6 +163,15 @@ public class Controller implements Initializable {
     @FXML
     private Button transferbutton;
 
+    @FXML
+    private Label informationlabel1;
+
+    @FXML
+    private Label informationlabel2;
+
+    @FXML
+    private Label informationlabel3;
+
 
     @FXML
     void backbutton(ActionEvent event) {
@@ -186,6 +207,10 @@ public class Controller implements Initializable {
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
         transferbutton.setVisible(false);
+        informationlabel1.setVisible(false);
+        informationlabel2.setVisible(false);
+        informationlabel3.setVisible(false);
+        done.setVisible(false);
 
 
     }
@@ -226,6 +251,14 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+//        Region backgroundRegion = new Region();
+//        backgroundRegion.setBackground(new Background(new BackgroundImage()));
+//        backgroundRegion.setEffect(new ColorAdjust(...));
+//        Node otherContent = ...;
+//
+//        StackPane parent = new StackPane(backgroundRegion, otherContent);
+
         checkBalance.setVisible(false);
         depositMoney.setVisible(false);
         balanceTransfer.setVisible(false);
@@ -257,6 +290,10 @@ public class Controller implements Initializable {
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
         transferbutton.setVisible(false);
+        informationlabel1.setVisible(false);
+        informationlabel2.setVisible(false);
+        informationlabel3.setVisible(false);
+        done.setVisible(true);
 
     }
 
@@ -267,8 +304,29 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    void cancelbutton(ActionEvent event) {
+    int cancelbutton(ActionEvent event) throws IOException {
+        Stage stage = (Stage) AnchorPane.getScene().getWindow();
+        Alert.AlertType type = Alert.AlertType.CONFIRMATION;
+        Alert alert = new Alert(type,"");
+        alert.initModality(Modality.APPLICATION_MODAL);
+        alert.initOwner(stage);
 
+        alert.getDialogPane().setContentText("Do you want to cancel?");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            System.out.println("Yes button pressed");
+
+            Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            Scene tableViewScene = new Scene((tableViewParent));
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(tableViewScene);
+            window.show();
+
+        }else if(result.get() == ButtonType.CANCEL){
+            System.out.println("No button pressed");
+
+        }
+        return 0;
     }
 
     @FXML
@@ -321,6 +379,11 @@ public class Controller implements Initializable {
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
                 transferbutton.setVisible(false);
+                informationlabel1.setVisible(false);
+                informationlabel2.setVisible(false);
+                informationlabel3.setVisible(false);
+                done.setVisible(false);
+
             } else {
                 System.out.println("cardnumber or password is not correct");
                 password.setVisible(true);
@@ -374,6 +437,10 @@ public class Controller implements Initializable {
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
                 transferbutton.setVisible(false);
+                informationlabel1.setVisible(false);
+                informationlabel2.setVisible(false);
+                informationlabel3.setVisible(false);
+                done.setVisible(false);
             } catch (SQLException e) {
                 System.out.println("have some problem");
             }
@@ -422,6 +489,10 @@ public class Controller implements Initializable {
                 lastamountshowfield.setVisible(true);
                 withdrawsubmit.setVisible(false);
                 transferbutton.setVisible(false);
+                informationlabel1.setVisible(false);
+                informationlabel2.setVisible(false);
+                informationlabel3.setVisible(false);
+                done.setVisible(false);
             } catch (SQLException e) {
                 System.out.println("have some problem");
             }
@@ -457,6 +528,10 @@ public class Controller implements Initializable {
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
         transferbutton.setVisible(true);
+        informationlabel1.setVisible(false);
+        informationlabel2.setVisible(false);
+        informationlabel3.setVisible(false);
+        done.setVisible(false);
 
 
     }
@@ -491,6 +566,10 @@ public class Controller implements Initializable {
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(true);
         transferbutton.setVisible(false);
+        informationlabel1.setVisible(false);
+        informationlabel2.setVisible(false);
+        informationlabel3.setVisible(false);
+        done.setVisible(false);
 
     }
 
@@ -522,6 +601,10 @@ public class Controller implements Initializable {
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
         transferbutton.setVisible(false);
+        informationlabel1.setVisible(false);
+        informationlabel2.setVisible(false);
+        informationlabel3.setVisible(false);
+        done.setVisible(false);
 
     }
 
@@ -553,6 +636,10 @@ public class Controller implements Initializable {
         lastamountshowfield.setVisible(false);
         withdrawsubmit.setVisible(false);
         transferbutton.setVisible(false);
+        informationlabel1.setVisible(true);
+        informationlabel2.setVisible(true);
+        informationlabel3.setVisible(true);
+        done.setVisible(false);
 
 
     }
@@ -586,14 +673,18 @@ public class Controller implements Initializable {
                 retypepasswordfield.setVisible(false);
                 changepasssubmitbutton1.setVisible(false);
                 backbutton.setVisible(false);
-                oldpasswordfield.clear();
-                newpasswordfield.clear();
-                retypepasswordfield.clear();
                 lastamountlabel9.setVisible(false);
                 depositsubmitnutton2.setVisible(false);
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
                 transferbutton.setVisible(false);
+                informationlabel1.setVisible(false);
+                informationlabel2.setVisible(false);
+                informationlabel3.setVisible(false);
+                oldpasswordfield.clear();
+                newpasswordfield.clear();
+                retypepasswordfield.clear();
+                done.setVisible(false);
             } else {
                 System.out.println("have some problem");
 
@@ -654,6 +745,11 @@ public class Controller implements Initializable {
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
                 transferbutton.setVisible(false);
+                informationlabel1.setVisible(false);
+                informationlabel2.setVisible(false);
+                informationlabel3.setVisible(false);
+                done.setVisible(false);
+                depositamount.clear();
                 pst.close();
                 resultSet.close();
                 connection.close();
@@ -718,9 +814,15 @@ public class Controller implements Initializable {
                 lastamountshowfield.setVisible(false);
                 withdrawsubmit.setVisible(false);
                 transferbutton.setVisible(false);
+                done.setVisible(false);
+                informationlabel1.setVisible(false);
+                informationlabel2.setVisible(false);
+                informationlabel3.setVisible(false);
+                Withdrawamount.clear();
                 pst.close();
                 resultSet.close();
                 connection.close();
+
             }
         } catch (NumberFormatException | SQLException e) {
             System.out.println("Invalid Database Or Number Format");
@@ -787,6 +889,13 @@ public class Controller implements Initializable {
                             lastamountshowfield.setVisible(false);
                             withdrawsubmit.setVisible(false);
                             transferbutton.setVisible(false);
+                            informationlabel1.setVisible(false);
+                            informationlabel2.setVisible(false);
+                            informationlabel3.setVisible(false);
+                            done.setVisible(false);
+                            accountnumberfield.clear();
+                            transfermoneyfield.clear();
+                            tranferpasswordfield.clear();
 
                             pst2.close();
                             resultSet2.close();

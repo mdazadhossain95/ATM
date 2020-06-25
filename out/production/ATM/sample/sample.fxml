@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
         <GridPane hgap="10.0" layoutX="104.0" layoutY="397.0" prefHeight="257.0" prefWidth="322.0" vgap="10.0">
             <columnConstraints>
@@ -195,24 +195,24 @@
       <Button fx:id="withdrawBalance" layoutX="305.0" layoutY="126.0" mnemonicParsing="false" onAction="#withdrawBalance" prefHeight="32.0" prefWidth="130.0" text="Withdraw Balance" />
       <Button fx:id="changepassword" layoutX="104.0" layoutY="190.0" mnemonicParsing="false" onAction="#changepassword" prefHeight="32.0" prefWidth="130.0" text="Change Password" />
       <Button fx:id="information" layoutX="305.0" layoutY="190.0" mnemonicParsing="false" onAction="#information" prefHeight="31.0" prefWidth="130.0" text="information" />
-      <Button layoutX="661.0" layoutY="289.0" mnemonicParsing="false" onAction="#cardnumberdone" prefHeight="32.0" prefWidth="70.0" text="Done" />
-      <Label fx:id="label1" layoutX="137.0" layoutY="91.0" prefHeight="34.0" prefWidth="254.0" text="Your Account Balance is">
+      <Button fx:id="done" layoutX="661.0" layoutY="289.0" mnemonicParsing="false" onAction="#cardnumberdone" prefHeight="32.0" prefWidth="70.0" text="Done" />
+      <Label fx:id="label1" layoutX="150.0" layoutY="63.0" prefHeight="30.0" prefWidth="223.0" text="Your Account Balance is">
          <font>
-            <Font size="23.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="checkbalanceshow" layoutX="205.0" layoutY="155.0" prefHeight="39.0" prefWidth="130.0" text="Money">
+      <Label fx:id="checkbalanceshow" layoutX="216.0" layoutY="128.0" prefHeight="34.0" prefWidth="94.0" text="Money">
          <font>
-            <Font size="24.0" />
+            <Font size="20.0" />
          </font>
       </Label>
       <Button fx:id="backbutton" layoutX="253.0" layoutY="254.0" mnemonicParsing="false" onAction="#backbutton" prefHeight="31.0" prefWidth="70.0" text="Back" />
-      <Label fx:id="label2" layoutX="135.0" layoutY="122.0" prefHeight="39.0" prefWidth="246.0" text="Write Your Amount">
+      <Label fx:id="label2" layoutX="153.0" layoutY="126.0" prefHeight="32.0" prefWidth="210.0" text="Write Your Amount">
          <font>
-            <Font size="28.0" />
+            <Font size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="Withdrawamount" layoutX="179.0" layoutY="155.0" prefHeight="34.0" prefWidth="159.0" />
+      <TextField fx:id="Withdrawamount" layoutX="179.0" layoutY="190.0" prefHeight="34.0" prefWidth="159.0" />
       <TextField fx:id="depositamount" layoutX="179.0" layoutY="188.0" prefHeight="34.0" prefWidth="159.0" />
       <Label fx:id="oldpasswordlabel3" layoutX="104.0" layoutY="61.0" prefHeight="34.0" prefWidth="130.0" text="Old Password">
          <font>
@@ -264,6 +264,21 @@
       </ImageView>
       <TextField fx:id="lastamountshowfield" layoutX="268.0" layoutY="62.0" prefHeight="32.0" prefWidth="149.0" />
       <Button fx:id="withdrawsubmit" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#withdrawsubmitbutton" prefHeight="31.0" prefWidth="70.0" text="Submit" />
-      <Button fx:id="transferbutton" layoutX="498.0" layoutY="372.0" mnemonicParsing="false" onAction="#transfersubmitbutton" prefHeight="31.0" prefWidth="70.0" text="Button" />
+      <Button fx:id="transferbutton" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#transfersubmitbutton" prefHeight="31.0" prefWidth="70.0" text="Submit" />
+      <Label fx:id="informationlabel1" layoutX="146.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" text="If you need any kind of information" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="informationlabel2" layoutX="219.0" layoutY="127.0" prefHeight="31.0" prefWidth="70.0" text="Please call" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="informationlabel3" layoutX="182.0" layoutY="187.0" prefHeight="39.0" prefWidth="130.0" text="+8615977208627">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
