@@ -1,0 +1,25 @@
+  @FXML
+    int cancelbutton(ActionEvent event) throws IOException {
+        Stage stage = (Stage) AnchorPane.getScene().getWindow();
+        Alert.AlertType type = Alert.AlertType.CONFIRMATION;
+        Alert alert = new Alert(type,"");
+        alert.initModality(Modality.APPLICATION_MODAL);
+        alert.initOwner(stage);
+
+        alert.getDialogPane().setContentText("Do you want to cancel?");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            System.out.println("Yes button pressed");
+
+            Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            Scene tableViewScene = new Scene((tableViewParent));
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(tableViewScene);
+            window.show();
+
+        }else if(result.get() == ButtonType.CANCEL){
+            System.out.println("No button pressed");
+
+        }
+        return 0;
+    }
