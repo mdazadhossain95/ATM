@@ -19,16 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="how to cancel a program and restart fxml file">
-      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StyleSheet/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mdaza.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mdaza.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM/META-INF/ATM.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="change Style Sheet package position also add background picture">
+      <change beforePath="$PROJECT_DIR$/src/StyleSheet/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/StyleSheet/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +252,7 @@
       <workItem from="1592827574296" duration="21450000" />
       <workItem from="1592900290430" duration="23388000" />
       <workItem from="1593084167586" duration="594000" />
-      <workItem from="1593085949862" duration="16113000" />
+      <workItem from="1593085949862" duration="16461000" />
     </task>
     <task id="LOCAL-00001" summary="new update deleted old files reform project">
       <created>1592838093887</created>
@@ -304,7 +296,28 @@
       <option name="project" value="LOCAL" />
       <updated>1593094657808</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add new button Style Sheet">
+      <created>1593119108126</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1593119108126</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change Style Sheet package position">
+      <created>1593119274019</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1593119274020</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change Style Sheet package position also add background picture">
+      <created>1593119331713</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1593119331713</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +345,10 @@
     <MESSAGE value="transfer balance code done" />
     <MESSAGE value="update change password option" />
     <MESSAGE value="how to cancel a program and restart fxml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="how to cancel a program and restart fxml file" />
+    <MESSAGE value="add new button Style Sheet" />
+    <MESSAGE value="change Style Sheet package position" />
+    <MESSAGE value="change Style Sheet package position also add background picture" />
+    <option name="LAST_COMMIT_MESSAGE" value="change Style Sheet package position also add background picture" />
   </component>
   <component name="WindowStateProjectService">
     <state x="330" y="91" width="814" height="728" key="#Intentions" timestamp="1592856659035">
@@ -363,22 +379,22 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="467" y="34" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1592834332608" />
-    <state width="1431" height="219" key="GridCell.Tab.0.bottom" timestamp="1593119011469">
+    <state width="715" height="219" key="GridCell.Tab.0.bottom" timestamp="1593119363570">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="219" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1593119011469" />
-    <state width="1431" height="219" key="GridCell.Tab.0.center" timestamp="1593119011468">
+    <state width="715" height="219" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1593119363570" />
+    <state width="715" height="219" key="GridCell.Tab.0.center" timestamp="1593119363569">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="219" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1593119011468" />
-    <state width="1431" height="219" key="GridCell.Tab.0.left" timestamp="1593119011468">
+    <state width="715" height="219" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1593119363569" />
+    <state width="715" height="219" key="GridCell.Tab.0.left" timestamp="1593119363568">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="219" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1593119011468" />
-    <state width="1431" height="219" key="GridCell.Tab.0.right" timestamp="1593119011468">
+    <state width="715" height="219" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1593119363568" />
+    <state width="715" height="219" key="GridCell.Tab.0.right" timestamp="1593119363570">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="219" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1593119011468" />
+    <state width="715" height="219" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1593119363570" />
     <state width="1431" height="277" key="GridCell.Tab.1.bottom" timestamp="1593116618212">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
@@ -399,10 +415,10 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="218" y="6" key="SettingsEditor/0.0.1474.864@0.0.1474.864" timestamp="1592828891288" />
-    <state x="330" y="165" key="Vcs.Push.Dialog.v2" timestamp="1593094664294">
+    <state x="330" y="165" key="Vcs.Push.Dialog.v2" timestamp="1593119354539">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="330" y="165" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1593094664294" />
+    <state x="330" y="165" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1593119354539" />
     <state x="178" y="53" key="new project wizard" timestamp="1592834352516">
       <screen x="0" y="0" width="1474" height="864" />
     </state>

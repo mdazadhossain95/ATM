@@ -10,7 +10,6 @@
 }
 
 .button:focused {
-
     -fx-border-color: transparent, white;
     -fx-border-width: 1, 1;
     -fx-border-style: solid;
