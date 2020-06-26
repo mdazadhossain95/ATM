@@ -16,7 +16,7 @@
 
 <AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-      <ImageView fitHeight="230.0" fitWidth="345.0" layoutX="98.0" layoutY="60.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="230.0" fitWidth="345.0" layoutX="98.0" layoutY="60.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Customer/background.jpg" />
          </image>
@@ -192,12 +192,12 @@
                 </Button>
             </children>
         </VBox>
-      <Button fx:id="checkBalance" layoutX="304.0" layoutY="62.0" mnemonicParsing="false" onAction="#checkBalance" prefHeight="32.0" prefWidth="130.0" text="Check Balance" />
-      <Button fx:id="depositMoney" layoutX="104.0" layoutY="62.0" mnemonicParsing="false" onAction="#depositMoney" prefHeight="32.0" prefWidth="130.0" text="Deposit Money" />
-      <Button fx:id="balanceTransfer" layoutX="104.0" layoutY="127.0" mnemonicParsing="false" onAction="#balanceTransfer" prefHeight="31.0" prefWidth="130.0" text="Balance Transfer" />
-      <Button fx:id="withdrawBalance" layoutX="305.0" layoutY="126.0" mnemonicParsing="false" onAction="#withdrawBalance" prefHeight="32.0" prefWidth="130.0" text="Withdraw Balance" />
-      <Button fx:id="changepassword" layoutX="104.0" layoutY="190.0" mnemonicParsing="false" onAction="#changepassword" prefHeight="32.0" prefWidth="130.0" text="Change Password" />
-      <Button fx:id="information" layoutX="305.0" layoutY="190.0" mnemonicParsing="false" onAction="#information" prefHeight="31.0" prefWidth="130.0" text="information" />
+      <Button fx:id="checkBalance" layoutX="304.0" layoutY="62.0" mnemonicParsing="false" onAction="#checkBalance" prefHeight="32.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Check Balance" />
+      <Button fx:id="depositMoney" layoutX="104.0" layoutY="62.0" mnemonicParsing="false" onAction="#depositMoney" prefHeight="32.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Deposit Money" />
+      <Button fx:id="balanceTransfer" layoutX="104.0" layoutY="127.0" mnemonicParsing="false" onAction="#balanceTransfer" prefHeight="31.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Balance Transfer" />
+      <Button fx:id="withdrawBalance" layoutX="305.0" layoutY="126.0" mnemonicParsing="false" onAction="#withdrawBalance" prefHeight="32.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Withdraw Balance" />
+      <Button fx:id="changepassword" layoutX="104.0" layoutY="190.0" mnemonicParsing="false" onAction="#changepassword" prefHeight="32.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Change Password" />
+      <Button fx:id="information" layoutX="305.0" layoutY="190.0" mnemonicParsing="false" onAction="#information" prefHeight="31.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="information" />
       <Button fx:id="done" layoutX="661.0" layoutY="289.0" mnemonicParsing="false" onAction="#cardnumberdone" prefHeight="32.0" prefWidth="70.0" text="Done" />
       <Label fx:id="label1" layoutX="154.0" layoutY="63.0" prefHeight="30.0" prefWidth="223.0" text="Your Account Balance is">
          <font>
@@ -209,7 +209,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="backbutton" layoutX="253.0" layoutY="254.0" mnemonicParsing="false" onAction="#backbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/style.css" text="Back" />
+      <Button fx:id="backbutton" layoutX="253.0" layoutY="254.0" mnemonicParsing="false" onAction="#backbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Back" />
       <Label fx:id="label2" layoutX="160.0" layoutY="126.0" prefHeight="32.0" prefWidth="210.0" text="Write Your Amount">
          <font>
             <Font size="22.0" />
@@ -253,8 +253,8 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Button fx:id="changepasssubmitbutton1" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#changepassSubmitbutton" prefHeight="31.0" prefWidth="70.0" text="Submit" />
-      <Button fx:id="depositsubmitnutton2" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#depositbuttonsubmit" prefHeight="32.0" prefWidth="70.0" text="Submit" />
+      <Button fx:id="changepasssubmitbutton1" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#changepassSubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
+      <Button fx:id="depositsubmitnutton2" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#depositbuttonsubmit" prefHeight="32.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
       <Label fx:id="lastamountlabel9" layoutX="104.0" layoutY="61.0" prefHeight="34.0" prefWidth="119.0" text="Last Amount is">
          <font>
             <Font size="17.0" />
@@ -266,8 +266,8 @@
          </image>
       </ImageView>
       <TextField fx:id="lastamountshowfield" layoutX="268.0" layoutY="62.0" prefHeight="32.0" prefWidth="149.0" />
-      <Button fx:id="withdrawsubmit" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#withdrawsubmitbutton" prefHeight="31.0" prefWidth="70.0" text="Submit" />
-      <Button fx:id="transferbutton" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#transfersubmitbutton" prefHeight="31.0" prefWidth="70.0" text="Submit" />
+      <Button fx:id="withdrawsubmit" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#withdrawsubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
+      <Button fx:id="transferbutton" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#transfersubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
       <Label fx:id="informationlabel1" layoutX="150.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" text="If you need any kind of information" textAlignment="CENTER">
          <font>
             <Font size="14.0" />

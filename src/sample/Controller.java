@@ -1,7 +1,6 @@
 package sample;
 
 import Database.DatabaseConnector;
-
 import com.mysql.jdbc.PreparedStatement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,10 +10,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 
 import javax.swing.*;
 import java.io.IOException;
@@ -61,8 +59,6 @@ public class Controller implements Initializable {
 
     @FXML
     private Button nine;
-
-
 
     @FXML
     private Button done;
@@ -152,9 +148,6 @@ public class Controller implements Initializable {
     private Button depositsubmitnutton2;
 
     @FXML
-    private TextField lastamountfield;
-
-    @FXML
     private Label lastamountlabel9;
 
     @FXML
@@ -215,7 +208,6 @@ public class Controller implements Initializable {
         informationlabel3.setVisible(false);
         done.setVisible(false);
 
-
     }
 
 
@@ -254,14 +246,6 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-//        Region backgroundRegion = new Region();
-//        backgroundRegion.setBackground(new Background(new BackgroundImage()));
-//        backgroundRegion.setEffect(new ColorAdjust(...));
-//        Node otherContent = ...;
-//
-//        StackPane parent = new StackPane(backgroundRegion, otherContent);
-
         checkBalance.setVisible(false);
         depositMoney.setVisible(false);
         balanceTransfer.setVisible(false);

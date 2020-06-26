@@ -1,16 +1,42 @@
 <component name="ProjectDictionaryState">
   <dictionary name="mdaza">
     <words>
+      <w>accountnumberfield</w>
+      <w>accountnumberlabel</w>
+      <w>backbutton</w>
       <w>cancelbutton</w>
       <w>cardnumber</w>
       <w>cardnumberdone</w>
+      <w>changepasssubmitbutton</w>
+      <w>changepassword</w>
+      <w>checkbalanceshow</w>
       <w>clearbutton</w>
+      <w>depositamount</w>
+      <w>depositsubmitnutton</w>
+      <w>dropshadow</w>
       <w>enterbutton</w>
+      <w>informationlabel</w>
       <w>lastamount</w>
+      <w>lastamountfield</w>
+      <w>lastamountlabel</w>
+      <w>lastamountshowfield</w>
       <w>newbalance</w>
+      <w>newpasswordfield</w>
+      <w>newpasswordlabel</w>
+      <w>oldpasswordfield</w>
+      <w>oldpasswordlabel</w>
       <w>receivernewbalance</w>
+      <w>retypepasswordfield</w>
+      <w>retypepasswordlabel</w>
       <w>successfull</w>
+      <w>tranferpasswordfield</w>
+      <w>transferamountlabel</w>
+      <w>transferbutton</w>
+      <w>transfermoneyfield</w>
+      <w>transferpasswordlabel</w>
       <w>transfersubmitbutton</w>
+      <w>withdrawamount</w>
+      <w>withdrawsubmit</w>
     </words>
   </dictionary>
 </component>
