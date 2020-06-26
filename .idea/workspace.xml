@@ -19,17 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="change Style Sheet package position also add background picture">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StyleSheet/buttonstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cssdialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mdaza.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mdaza.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM/StyleSheet/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/Controller.class" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="update style.css to buttonstyle.css">
       <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StyleSheet/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Customer/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/pictures/background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Customer/banklogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/pictures/banklogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +89,12 @@
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
@@ -266,7 +265,7 @@
       <workItem from="1592900290430" duration="23388000" />
       <workItem from="1593084167586" duration="594000" />
       <workItem from="1593085949862" duration="16461000" />
-      <workItem from="1593163670716" duration="8248000" />
+      <workItem from="1593163670716" duration="8552000" />
     </task>
     <task id="LOCAL-00001" summary="new update deleted old files reform project">
       <created>1592838093887</created>
@@ -331,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1593119331713</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update style.css to buttonstyle.css">
+      <created>1593174209548</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1593174209548</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update style.css to buttonstyle.css">
+      <created>1593174262557</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1593174262557</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +375,8 @@
     <MESSAGE value="add new button Style Sheet" />
     <MESSAGE value="change Style Sheet package position" />
     <MESSAGE value="change Style Sheet package position also add background picture" />
-    <option name="LAST_COMMIT_MESSAGE" value="change Style Sheet package position also add background picture" />
+    <MESSAGE value="update style.css to buttonstyle.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="update style.css to buttonstyle.css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="364" y="111" key="#Inspections" timestamp="1593165353219">
@@ -397,22 +411,22 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="467" y="34" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1592834332608" />
-    <state width="1431" height="147" key="GridCell.Tab.0.bottom" timestamp="1593174104780">
+    <state width="1431" height="147" key="GridCell.Tab.0.bottom" timestamp="1593174402410">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="147" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1593174104780" />
-    <state width="1431" height="147" key="GridCell.Tab.0.center" timestamp="1593174104780">
+    <state width="1431" height="147" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1593174402410" />
+    <state width="1431" height="147" key="GridCell.Tab.0.center" timestamp="1593174402410">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="147" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1593174104780" />
-    <state width="1431" height="147" key="GridCell.Tab.0.left" timestamp="1593174104780">
+    <state width="1431" height="147" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1593174402410" />
+    <state width="1431" height="147" key="GridCell.Tab.0.left" timestamp="1593174402410">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="147" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1593174104780" />
-    <state width="1431" height="147" key="GridCell.Tab.0.right" timestamp="1593174104780">
+    <state width="1431" height="147" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1593174402410" />
+    <state width="1431" height="147" key="GridCell.Tab.0.right" timestamp="1593174402410">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="147" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1593174104780" />
+    <state width="1431" height="147" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1593174402410" />
     <state width="1431" height="277" key="GridCell.Tab.1.bottom" timestamp="1593116618212">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
@@ -433,10 +447,10 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="218" y="6" key="SettingsEditor/0.0.1474.864@0.0.1474.864" timestamp="1592828891288" />
-    <state x="330" y="165" key="Vcs.Push.Dialog.v2" timestamp="1593119354539">
+    <state x="330" y="165" key="Vcs.Push.Dialog.v2" timestamp="1593174278917">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="330" y="165" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1593119354539" />
+    <state x="330" y="165" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1593174278917" />
     <state x="178" y="53" key="new project wizard" timestamp="1592834352516">
       <screen x="0" y="0" width="1474" height="864" />
     </state>

@@ -18,7 +18,7 @@
     <children>
       <ImageView fitHeight="230.0" fitWidth="345.0" layoutX="98.0" layoutY="60.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Customer/background.jpg" />
+            <Image url="@../pictures/background.jpg" />
          </image>
       </ImageView>
         <GridPane hgap="10.0" layoutX="106.0" layoutY="305.0" prefHeight="257.0" prefWidth="322.0" vgap="10.0">
@@ -262,7 +262,7 @@
       </Label>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="524.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Customer/banklogo.png" />
+            <Image url="@../pictures/banklogo.png" />
          </image>
       </ImageView>
       <TextField fx:id="lastamountshowfield" layoutX="268.0" layoutY="62.0" prefHeight="32.0" prefWidth="149.0" />
