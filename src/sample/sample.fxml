@@ -21,7 +21,7 @@
             <Image url="@../pictures/background.jpg" />
          </image>
       </ImageView>
-        <GridPane hgap="10.0" layoutX="106.0" layoutY="305.0" prefHeight="257.0" prefWidth="322.0" vgap="10.0">
+        <GridPane hgap="10.0" layoutX="106.0" layoutY="305.0" onKeyPressed="#handleButtonAction1" prefHeight="257.0" prefWidth="322.0" vgap="10.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.20001220703125" minWidth="10.0" prefWidth="64.0000244140625" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="73.20001220703125" minWidth="10.0" prefWidth="63.7999755859375" />
