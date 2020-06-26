@@ -40,6 +40,7 @@
       <w>transfersubmitbutton</w>
       <w>withdrawamount</w>
       <w>withdrawsubmit</w>
+      <w>withdrawsubmitbutton</w>
     </words>
   </dictionary>
 </component>
