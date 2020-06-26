@@ -215,8 +215,8 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="Withdrawamount" layoutX="179.0" layoutY="190.0" prefHeight="34.0" prefWidth="159.0" />
-      <TextField fx:id="depositamount" layoutX="179.0" layoutY="188.0" prefHeight="34.0" prefWidth="159.0" />
+      <TextField fx:id="Withdrawamount" layoutX="179.0" layoutY="190.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
+      <TextField fx:id="depositamount" layoutX="179.0" layoutY="188.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
       <Label fx:id="oldpasswordlabel3" layoutX="104.0" layoutY="61.0" prefHeight="34.0" prefWidth="130.0" text="Old Password">
          <font>
             <Font size="19.0" />
@@ -232,12 +232,12 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="oldpasswordfield" layoutX="255.0" layoutY="61.0" prefHeight="34.0" prefWidth="159.0" />
-      <TextField fx:id="newpasswordfield" layoutX="255.0" layoutY="125.0" prefHeight="34.0" prefWidth="159.0" />
-      <TextField fx:id="retypepasswordfield" layoutX="255.0" layoutY="189.0" prefHeight="34.0" prefWidth="159.0" />
-      <TextField fx:id="accountnumberfield" layoutX="255.0" layoutY="61.0" prefHeight="34.0" prefWidth="159.0" />
-      <TextField fx:id="transfermoneyfield" layoutX="255.0" layoutY="125.0" prefHeight="34.0" prefWidth="159.0" />
-      <TextField fx:id="tranferpasswordfield" layoutX="255.0" layoutY="189.0" prefHeight="34.0" prefWidth="159.0" />
+      <TextField fx:id="oldpasswordfield" layoutX="255.0" layoutY="61.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
+      <TextField fx:id="newpasswordfield" layoutX="255.0" layoutY="125.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
+      <TextField fx:id="retypepasswordfield" layoutX="255.0" layoutY="189.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
+      <TextField fx:id="accountnumberfield" layoutX="255.0" layoutY="61.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
+      <TextField fx:id="transfermoneyfield" layoutX="255.0" layoutY="125.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
+      <TextField fx:id="tranferpasswordfield" layoutX="255.0" layoutY="189.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
       <Label fx:id="accountnumberlabel6" layoutX="104.0" layoutY="60.0" prefHeight="34.0" prefWidth="130.0" text="Card Number">
          <font>
             <Font size="17.0" />
@@ -265,7 +265,7 @@
             <Image url="@../pictures/banklogo.png" />
          </image>
       </ImageView>
-      <TextField fx:id="lastamountshowfield" layoutX="268.0" layoutY="62.0" prefHeight="32.0" prefWidth="149.0" />
+      <TextField fx:id="lastamountshowfield" layoutX="268.0" layoutY="62.0" prefHeight="32.0" prefWidth="149.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
       <Button fx:id="withdrawsubmit" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#withdrawsubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
       <Button fx:id="transferbutton" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#transfersubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
       <Label fx:id="informationlabel1" layoutX="150.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" text="If you need any kind of information" textAlignment="CENTER">
