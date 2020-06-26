@@ -1,0 +1,15 @@
+.text-field{
+    -fx-box-sizing: border-box;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-style: solid ;
+}
+
+.text-field:focused {
+    -fx-border-color: lightgreen;
+}
+
+.text-field:hover {
+    -fx-background-color: lightgreen;
+}
+

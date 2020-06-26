@@ -116,7 +116,7 @@
                 </Button>
             </children>
         </GridPane>
-        <TextField fx:id="cardnumber" layoutX="524.0" layoutY="252.0" prefHeight="26.0" prefWidth="210.0" promptText="Enter your card number" />
+        <TextField fx:id="cardnumber" layoutX="524.0" layoutY="252.0" prefHeight="26.0" prefWidth="210.0" promptText="Enter your card number" stylesheets="@../StyleSheet/textfieldstyle.css" />
         <VBox layoutX="44.0" layoutY="59.0" prefHeight="231.0" prefWidth="54.0">
             <children>
                 <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="-&gt;">
@@ -283,6 +283,6 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="password" layoutX="184.0" layoutY="226.0" promptText="Enter the password" />
+      <TextField fx:id="password" layoutX="184.0" layoutY="226.0" promptText="Enter the password" stylesheets="@../StyleSheet/textfieldstyle.css" />
     </children>
 </AnchorPane>
