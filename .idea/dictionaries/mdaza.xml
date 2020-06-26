@@ -7,11 +7,13 @@
       <w>cancelbutton</w>
       <w>cardnumber</w>
       <w>cardnumberdone</w>
+      <w>changepass</w>
       <w>changepasssubmitbutton</w>
       <w>changepassword</w>
       <w>checkbalanceshow</w>
       <w>clearbutton</w>
       <w>depositamount</w>
+      <w>depositbuttonsubmit</w>
       <w>depositsubmitnutton</w>
       <w>dropshadow</w>
       <w>enterbutton</w>
@@ -28,6 +30,7 @@
       <w>receivernewbalance</w>
       <w>retypepasswordfield</w>
       <w>retypepasswordlabel</w>
+      <w>submitbutton</w>
       <w>successfull</w>
       <w>tranferpasswordfield</w>
       <w>transferamountlabel</w>

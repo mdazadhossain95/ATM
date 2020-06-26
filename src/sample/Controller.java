@@ -294,22 +294,22 @@ public class Controller implements Initializable {
     int cancelbutton(ActionEvent event) throws IOException {
         Stage stage = (Stage) AnchorPane.getScene().getWindow();
         Alert.AlertType type = Alert.AlertType.CONFIRMATION;
-        Alert alert = new Alert(type,"");
+        Alert alert = new Alert(type, "");
         alert.initModality(Modality.APPLICATION_MODAL);
         alert.initOwner(stage);
 
         alert.getDialogPane().setContentText("Do you want to cancel?");
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK){
+        if (result.get() == ButtonType.OK) {
             System.out.println("Yes button pressed");
 
             Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
             Scene tableViewScene = new Scene((tableViewParent));
-            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(tableViewScene);
             window.show();
 
-        }else if(result.get() == ButtonType.CANCEL){
+        } else if (result.get() == ButtonType.CANCEL) {
             System.out.println("No button pressed");
 
         }
@@ -628,8 +628,6 @@ public class Controller implements Initializable {
         informationlabel2.setVisible(true);
         informationlabel3.setVisible(true);
         done.setVisible(false);
-
-
     }
 
     @FXML
@@ -638,16 +636,20 @@ public class Controller implements Initializable {
         connection = DatabaseConnector.getConnection();
         String sql = "UPDATE customer SET password = '"+retypepasswordfield.getText()+"' WHERE cardnumber = '"+cardnumber.getText()+"'";
         String sql2 = "UPDATE account SET password = '"+retypepasswordfield.getText()+"' WHERE cardnumber = '"+cardnumber.getText()+"'";
+
         try {
-//            while(oldpasswordfield.getText() != null || newpasswordfield.getText() != null || retypepasswordfield.getText() != null)
-            pst = (PreparedStatement) connection.prepareStatement(sql);
-            PreparedStatement pst2 = (PreparedStatement) connection.prepareStatement(sql2);
+            if (oldpasswordfield.getText().isEmpty() || newpasswordfield.getText().isEmpty() || retypepasswordfield.getText().isEmpty()) {
+                System.out.println("Please fill your password correctly");
+            } else {
+                pst = (PreparedStatement) connection.prepareStatement(sql);
+                PreparedStatement pst2 = (PreparedStatement) connection.prepareStatement(sql2);
 
-            int numRowsChanged = pst.executeUpdate();
-            int numRowsChanged2 = pst2.executeUpdate();
+                int numRowsChanged = pst.executeUpdate();
+                int numRowsChanged2 = pst2.executeUpdate();
 
-            if (resultSet.next() || oldpasswordfield.getText().equals(password.getText()) || newpasswordfield.getText().equals(retypepasswordfield.getText()) ) {
-
+                if (resultSet.next() || oldpasswordfield.getText().equals(password.getText()) || newpasswordfield.getText().equals(retypepasswordfield.getText())) {
+                    System.out.println("ok");
+                }
                 checkBalance.setVisible(true);
                 depositMoney.setVisible(true);
                 balanceTransfer.setVisible(true);
@@ -674,15 +676,12 @@ public class Controller implements Initializable {
                 newpasswordfield.clear();
                 retypepasswordfield.clear();
                 done.setVisible(false);
-            } else {
-                System.out.println("Please fill your password correctly");
-
 
             }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
-
+        System.out.println("");
     }
 
     @FXML
