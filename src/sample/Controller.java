@@ -65,6 +65,9 @@ public class Controller implements Initializable {
     private Button done;
 
     @FXML
+    private TextArea textarea;
+
+    @FXML
     private TextField cardnumber;
 
     @FXML
@@ -212,6 +215,7 @@ public class Controller implements Initializable {
         informationlabel3.setVisible(false);
         done.setVisible(true);
 
+
     }
 
     @FXML
@@ -225,8 +229,14 @@ public class Controller implements Initializable {
 
             resultSet = pst.executeQuery();
 
+
+
             if (resultSet.next()) {
-                System.out.println("cardnumber and password is correct");
+                System.out.println("cardnumber and password is correct\n");
+                System.out.println("********************************\n");
+                System.out.println("Welcome to the AHT Bank Ltd. \n");
+                System.out.println("************************************\n");
+
                 password.setVisible(false);
                 checkBalance.setVisible(true);
                 depositMoney.setVisible(true);
@@ -318,6 +328,7 @@ public class Controller implements Initializable {
 
     }
 
+
     @FXML
     void handleButtonAction(ActionEvent event) {
 
@@ -378,6 +389,7 @@ public class Controller implements Initializable {
 
         }
     }
+
 
 
     @FXML
@@ -942,5 +954,6 @@ public class Controller implements Initializable {
         informationlabel3.setVisible(true);
         done.setVisible(false);
     }
+
 
 }

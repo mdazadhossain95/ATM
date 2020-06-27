@@ -13,7 +13,9 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("ATM");
         primaryStage.setScene(new Scene(root, 750, 700));
+        primaryStage.setOpacity(0.7);
         primaryStage.show();
+
     }
 
 

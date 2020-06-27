@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -14,9 +15,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" stylesheets="@../StyleSheet/AnchorPane.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-      <ImageView fitHeight="230.0" fitWidth="345.0" layoutX="98.0" layoutY="60.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="230.0" fitWidth="345.0" layoutX="100.0" layoutY="60.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../pictures/background.jpg" />
          </image>
@@ -199,35 +200,35 @@
       <Button fx:id="changepassword" layoutX="104.0" layoutY="190.0" mnemonicParsing="false" onAction="#changepassword" prefHeight="32.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Change Password" />
       <Button fx:id="information" layoutX="305.0" layoutY="190.0" mnemonicParsing="false" onAction="#information" prefHeight="31.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="information" />
       <Button fx:id="done" layoutX="661.0" layoutY="289.0" mnemonicParsing="false" onAction="#cardnumberdone" prefHeight="32.0" prefWidth="70.0" text="Done" />
-      <Label fx:id="label1" layoutX="154.0" layoutY="63.0" prefHeight="30.0" prefWidth="223.0" text="Your Account Balance is">
+      <Label fx:id="label1" layoutX="154.0" layoutY="63.0" prefHeight="30.0" prefWidth="223.0" stylesheets="@../StyleSheet/labelstyle.css" text="Your Account Balance is">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="checkbalanceshow" layoutX="221.0" layoutY="128.0" prefHeight="34.0" prefWidth="94.0" text="Money">
+      <Label fx:id="checkbalanceshow" layoutX="221.0" layoutY="128.0" prefHeight="34.0" prefWidth="94.0" stylesheets="@../StyleSheet/labelstyle.css" text="Money">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
       <Button fx:id="backbutton" layoutX="253.0" layoutY="254.0" mnemonicParsing="false" onAction="#backbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Back" />
-      <Label fx:id="label2" layoutX="160.0" layoutY="126.0" prefHeight="32.0" prefWidth="210.0" text="Write Your Amount">
+      <Label fx:id="label2" layoutX="160.0" layoutY="126.0" prefHeight="32.0" prefWidth="210.0" stylesheets="@../StyleSheet/labelstyle.css" text="Write Your Amount">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
       <TextField fx:id="Withdrawamount" layoutX="179.0" layoutY="190.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
       <TextField fx:id="depositamount" layoutX="179.0" layoutY="188.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
-      <Label fx:id="oldpasswordlabel3" layoutX="104.0" layoutY="61.0" prefHeight="34.0" prefWidth="130.0" text="Old Password">
+      <Label fx:id="oldpasswordlabel3" layoutX="104.0" layoutY="61.0" prefHeight="34.0" prefWidth="130.0" stylesheets="@../StyleSheet/labelstyle.css" text="Old Password">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label fx:id="newpasswordlabel4" layoutX="104.0" layoutY="125.0" prefHeight="34.0" prefWidth="130.0" text="New Password">
+      <Label fx:id="newpasswordlabel4" layoutX="104.0" layoutY="125.0" prefHeight="34.0" prefWidth="130.0" stylesheets="@../StyleSheet/labelstyle.css" text="New Password">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label fx:id="retypepasswordlabel5" layoutX="104.0" layoutY="189.0" prefHeight="34.0" prefWidth="150.0" text="Retype Password">
+      <Label fx:id="retypepasswordlabel5" layoutX="104.0" layoutY="189.0" prefHeight="34.0" prefWidth="150.0" stylesheets="@../StyleSheet/labelstyle.css" text="Retype Password">
          <font>
             <Font size="19.0" />
          </font>
@@ -238,24 +239,24 @@
       <TextField fx:id="accountnumberfield" layoutX="255.0" layoutY="61.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
       <TextField fx:id="transfermoneyfield" layoutX="255.0" layoutY="125.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
       <TextField fx:id="tranferpasswordfield" layoutX="255.0" layoutY="189.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
-      <Label fx:id="accountnumberlabel6" layoutX="104.0" layoutY="60.0" prefHeight="34.0" prefWidth="130.0" text="Card Number">
+      <Label fx:id="accountnumberlabel6" layoutX="104.0" layoutY="60.0" prefHeight="34.0" prefWidth="130.0" stylesheets="@../StyleSheet/labelstyle.css" text="Card Number">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label fx:id="transferamountlabel7" layoutX="105.0" layoutY="125.0" prefHeight="34.0" prefWidth="141.0" text="Amount">
+      <Label fx:id="transferamountlabel7" layoutX="105.0" layoutY="125.0" prefHeight="34.0" prefWidth="141.0" stylesheets="@../StyleSheet/labelstyle.css" text="Amount">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label fx:id="transferpasswordlabel8" layoutX="107.0" layoutY="188.0" prefHeight="34.0" prefWidth="142.0" text="Password">
+      <Label fx:id="transferpasswordlabel8" layoutX="107.0" layoutY="188.0" prefHeight="34.0" prefWidth="142.0" stylesheets="@../StyleSheet/labelstyle.css" text="Password">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
       <Button fx:id="changepasssubmitbutton1" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#changepassSubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
       <Button fx:id="depositsubmitnutton2" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#depositbuttonsubmit" prefHeight="32.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
-      <Label fx:id="lastamountlabel9" layoutX="104.0" layoutY="61.0" prefHeight="34.0" prefWidth="119.0" text="Last Amount is">
+      <Label fx:id="lastamountlabel9" layoutX="104.0" layoutY="61.0" prefHeight="34.0" prefWidth="119.0" stylesheets="@../StyleSheet/labelstyle.css" text="Last Amount is">
          <font>
             <Font size="17.0" />
          </font>
@@ -268,21 +269,27 @@
       <TextField fx:id="lastamountshowfield" layoutX="268.0" layoutY="62.0" prefHeight="32.0" prefWidth="149.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
       <Button fx:id="withdrawsubmit" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#withdrawsubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
       <Button fx:id="transferbutton" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#transfersubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
-      <Label fx:id="informationlabel1" layoutX="150.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" text="If you need any kind of information" textAlignment="CENTER">
+      <Label fx:id="informationlabel1" layoutX="150.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" stylesheets="@../StyleSheet/labelstyle.css" text="If you need any kind of information" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="informationlabel2" layoutX="223.0" layoutY="126.0" prefHeight="31.0" prefWidth="70.0" text="Please call" textAlignment="CENTER">
+      <Label fx:id="informationlabel2" layoutX="223.0" layoutY="126.0" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/labelstyle.css" text="Please call" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="informationlabel3" layoutX="182.0" layoutY="187.0" prefHeight="39.0" prefWidth="130.0" text="+8615977208627">
+      <Label fx:id="informationlabel3" layoutX="182.0" layoutY="187.0" prefHeight="39.0" prefWidth="130.0" stylesheets="@../StyleSheet/labelstyle.css" text="+8615977208627">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
       <TextField fx:id="password" layoutX="184.0" layoutY="226.0" promptText="Enter the password" stylesheets="@../StyleSheet/textfieldstyle.css" />
+      <TextArea layoutX="446.0" layoutY="327.0" prefHeight="294.0" prefWidth="289.0">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </TextArea>
+      <Button layoutX="670.0" layoutY="633.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Print" />
     </children>
 </AnchorPane>
