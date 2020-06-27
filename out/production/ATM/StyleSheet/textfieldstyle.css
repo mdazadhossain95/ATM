@@ -3,13 +3,13 @@
     -fx-background-color: transparent;
     -fx-border-color: white;
     -fx-border-style: solid ;
+    -fx-text-fill: white;
+
 }
 
 .text-field:focused {
-    -fx-border-color: lightgreen;
-}
-
-.text-field:hover {
-    -fx-background-color: lightgreen;
+    -fx-background-color: white;
+    -fx-border-color: green;
+    -fx-text-fill: black;
 }
 
