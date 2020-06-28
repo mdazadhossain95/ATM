@@ -65,7 +65,8 @@ public class Controller implements Initializable {
     private Button done;
 
     @FXML
-    private TextArea textarea;
+    private TextArea textareaUI;
+    static TextArea staticTextArea;
 
     @FXML
     private TextField cardnumber;
@@ -172,10 +173,16 @@ public class Controller implements Initializable {
     @FXML
     private Label informationlabel3;
 
+    @FXML
+    public Button PrintButton;
+
+
+
     Connection connection = null;
     ResultSet resultSet = null;
     PreparedStatement pst = null;
     Statement statement = null;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -214,12 +221,19 @@ public class Controller implements Initializable {
         informationlabel2.setVisible(false);
         informationlabel3.setVisible(false);
         done.setVisible(true);
+        PrintButton.setVisible(false);
+
+        textareaUI.setVisible(false);
+        textareaUI.setMouseTransparent(true);
+        textareaUI.setFocusTraversable(false);
+        staticTextArea = textareaUI;
+
 
 
     }
 
     @FXML
-    private void enterbutton(ActionEvent event) throws Exception {
+    void enterbutton(ActionEvent event) throws SQLException {
         connection = DatabaseConnector.getConnection();
         String sql = "SELECT * FROM `customer` WHERE cardnumber = ? and password = ?";
         try {
@@ -229,13 +243,19 @@ public class Controller implements Initializable {
 
             resultSet = pst.executeQuery();
 
-
-
             if (resultSet.next()) {
-                System.out.println("cardnumber and password is correct\n");
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
                 System.out.println("********************************\n");
-                System.out.println("Welcome to the AHT Bank Ltd. \n");
-                System.out.println("************************************\n");
+                System.out.println("Cardnumber : " + cardnumber.getText() +".\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
+
 
                 password.setVisible(false);
                 checkBalance.setVisible(true);
@@ -271,9 +291,23 @@ public class Controller implements Initializable {
                 informationlabel2.setVisible(false);
                 informationlabel3.setVisible(false);
                 done.setVisible(false);
+                PrintButton.setVisible(false);
+                textareaUI.setVisible(true);
 
             } else {
+
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("********************************\n");
                 System.out.println("cardnumber or password is not correct");
+                System.out.println("Please Try Again\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
                 password.setVisible(true);
 
             }
@@ -289,6 +323,17 @@ public class Controller implements Initializable {
 
     @FXML
     void backbutton(ActionEvent event) {
+        textareaUI.clear();
+        System.out.println("                       AHT Bank Ltd.");
+        System.out.println("********************************");
+        System.out.println("Welcome to the AHT Bank Ltd.");
+        System.out.println("********************************\n");
+        System.out.println("Thank You For Using Our Atm.");
+        System.out.println("********************************\n");
+        System.out.println("If You Need Any Kind Of Information");
+        System.out.println("Please Call : +8615977208627.");
+        System.out.println("********************************\n");
+
         label1.setVisible(false);
         checkbalanceshow.setVisible(false);
         backbutton.setVisible(false);
@@ -325,6 +370,7 @@ public class Controller implements Initializable {
         informationlabel2.setVisible(false);
         informationlabel3.setVisible(false);
         done.setVisible(false);
+        PrintButton.setVisible(false);
 
     }
 
@@ -391,7 +437,6 @@ public class Controller implements Initializable {
     }
 
 
-
     @FXML
     void cardnumberdone(ActionEvent event) {
         password.setVisible(true);
@@ -409,7 +454,6 @@ public class Controller implements Initializable {
         alert.getDialogPane().setContentText("Do you want to cancel?");
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK) {
-            System.out.println("Yes button pressed");
 
             Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
             Scene tableViewScene = new Scene((tableViewParent));
@@ -418,7 +462,7 @@ public class Controller implements Initializable {
             window.show();
 
         } else if (result.get() == ButtonType.CANCEL) {
-            System.out.println("No button pressed");
+            System.out.println("");
 
         }
         return 0;
@@ -427,6 +471,17 @@ public class Controller implements Initializable {
     @FXML
     void clearbutton(ActionEvent event) {
         password.clear();
+        PrintButton.setVisible(false);
+        textareaUI.clear();
+        System.out.println("                       AHT Bank Ltd.");
+        System.out.println("********************************");
+        System.out.println("Welcome to the AHT Bank Ltd.");
+        System.out.println("********************************\n");
+        System.out.println("Thank You For Using Our Atm.");
+        System.out.println("********************************\n");
+        System.out.println("If You Need Any Kind Of Information");
+        System.out.println("Please Call : +8615977208627.");
+        System.out.println("********************************\n");
 
 
     }
@@ -438,6 +493,18 @@ public class Controller implements Initializable {
         while (resultSet.next())
             try {
                 checkbalanceshow.setText(resultSet.getString("lastamount"));
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("********************************\n");
+                System.out.println("Your Card Number is : " + cardnumber.getText() + ".");
+                System.out.println("Current Account balance : " + checkbalanceshow.getText() + ".\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
 
                 checkBalance.setVisible(false);
                 depositMoney.setVisible(false);
@@ -473,8 +540,21 @@ public class Controller implements Initializable {
                 informationlabel2.setVisible(false);
                 informationlabel3.setVisible(false);
                 done.setVisible(false);
+                PrintButton.setVisible(true);
             } catch (SQLException e) {
-                System.out.println("have some problem");
+
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("********************************\n");
+                System.out.println("Invalid Database Or Number Format\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
+
             }
 
 
@@ -488,6 +568,16 @@ public class Controller implements Initializable {
         while (resultSet.next())
             try {
                 lastamountshowfield.setText(resultSet.getString("lastamount"));
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("********************************\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
 
 
                 checkBalance.setVisible(false);
@@ -524,8 +614,20 @@ public class Controller implements Initializable {
                 informationlabel2.setVisible(false);
                 informationlabel3.setVisible(false);
                 done.setVisible(false);
+                PrintButton.setVisible(false);
             } catch (SQLException e) {
-                System.out.println("have some problem");
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("********************************\n");
+                System.out.println("have some problem\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
+
             }
     }
 
@@ -534,7 +636,19 @@ public class Controller implements Initializable {
 
         try {
             if (depositamount.getText().isEmpty() || Integer.parseInt(depositamount.getText()) < 0) {
+
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("********************************\n");
                 System.out.println("Please Enter A Valid Amount");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
+
             } else {
                 connection = DatabaseConnector.getConnection();
                 PreparedStatement pst = null;
@@ -546,8 +660,23 @@ public class Controller implements Initializable {
                     pst = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount =? WHERE cardnumber = '" + cardnumber.getText() + "'");
                     pst.setInt(1, NewBalance);
                     pst.executeUpdate();
+                    lastamountshowfield.setText(String.valueOf(NewBalance));
+                    checkbalanceshow.setText(String.valueOf(NewBalance));
                 }
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("********************************\n");
                 System.out.println("Cash Has Been Deposited");
+                System.out.println("Your Card Number is : " + cardnumber.getText() + ".");
+                System.out.println("Deposit Amount : " + depositamount.getText() + ".");
+                System.out.println("Current Account balance : " + checkbalanceshow.getText() + ".\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
                 password.setVisible(false);
                 checkBalance.setVisible(true);
                 depositMoney.setVisible(true);
@@ -586,15 +715,41 @@ public class Controller implements Initializable {
                 pst.close();
                 resultSet.close();
                 connection.close();
+                PrintButton.setVisible(true);
+                textareaUI.setEditable(false);
             }
         } catch (SQLException e) {
-            System.out.println("Invalid Database Or Number Format");
+
+            textareaUI.clear();
+            System.out.println("                       AHT Bank Ltd.");
+            System.out.println("********************************");
+            System.out.println("Welcome to the AHT Bank Ltd.");
+            System.out.println("********************************\n");
+            System.out.println("Invalid Database Or Number Format\n");
+            System.out.println("Thank You For Using Our Atm.");
+            System.out.println("********************************\n");
+            System.out.println("If You Need Any Kind Of Information");
+            System.out.println("Please Call : +8615977208627.");
+            System.out.println("********************************\n");
+
         }
         System.out.println("");
     }
 
     @FXML
     void withdrawBalance(ActionEvent actionEvent) {
+
+        textareaUI.clear();
+        System.out.println("                       AHT Bank Ltd.");
+        System.out.println("********************************");
+        System.out.println("Welcome to the AHT Bank Ltd.");
+        System.out.println("********************************\n");
+        System.out.println("Thank You For Using Our Atm");
+        System.out.println("********************************\n");
+        System.out.println("If You Need Any Information");
+        System.out.println("Please Call : +8615977208627.");
+        System.out.println("********************************\n");
+
         checkBalance.setVisible(false);
         depositMoney.setVisible(false);
         balanceTransfer.setVisible(false);
@@ -627,6 +782,7 @@ public class Controller implements Initializable {
         informationlabel2.setVisible(false);
         informationlabel3.setVisible(false);
         done.setVisible(false);
+        PrintButton.setVisible(false);
 
     }
 
@@ -635,7 +791,18 @@ public class Controller implements Initializable {
 
         try {
             if (Withdrawamount.getText().isEmpty() || Integer.parseInt(Withdrawamount.getText()) < 0) {
-                System.out.println("Please Enter A Valid Amount");
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("******************************** \n");
+                System.out.println("Please Enter A Valid Amount\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
+
             } else {
                 connection = DatabaseConnector.getConnection();
                 PreparedStatement pst = null;
@@ -646,14 +813,40 @@ public class Controller implements Initializable {
                 while (resultSet.next()) {
                     int NewBalance = (resultSet.getInt("lastamount") - Integer.parseInt(Withdrawamount.getText()));
                     if (NewBalance < 0) {
-                        System.out.println("Your Account Balance Is Low");
+                        textareaUI.clear();
+                        System.out.println("                       AHT Bank Ltd.");
+                        System.out.println("********************************");
+                        System.out.println("Welcome to the AHT Bank Ltd.");
+                        System.out.println("******************************** \n");
+                        System.out.println("Your Account Balance Is Low\n");
+                        System.out.println("Thank You For Using Our Atm.");
+                        System.out.println("******************************** \n");
+                        System.out.println("If You Need Any Kind Of Information");
+                        System.out.println("Please Call : +8615977208627.");
+                        System.out.println("********************************\n");
                     } else {
                         pst = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount =? WHERE cardnumber = '" + cardnumber.getText() + "'");
                         pst.setInt(1, NewBalance);
                         pst.executeUpdate();
-                        System.out.println("Transaction Successfull");
+                        lastamountshowfield.setText(String.valueOf(NewBalance));
+                        checkbalanceshow.setText(String.valueOf(NewBalance));
                     }
                 }
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("********************************\n");
+                System.out.println("Cash Has Been Withdrawn");
+                System.out.println("Card Number is : " + cardnumber.getText() + ".");
+                System.out.println("Deposit Amount : " + Withdrawamount.getText() + ".");
+                System.out.println("Current Account balance is : " + checkbalanceshow.getText() + ".\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
+
                 password.setVisible(false);
                 checkBalance.setVisible(true);
                 depositMoney.setVisible(true);
@@ -692,16 +885,40 @@ public class Controller implements Initializable {
                 pst.close();
                 resultSet.close();
                 connection.close();
+                PrintButton.setVisible(true);
 
             }
-        } catch (NumberFormatException | SQLException e) {
-            System.out.println("Invalid Database Or Number Format");
+        } catch (SQLException e) {
+
+            textareaUI.clear();
+            System.out.println("                       AHT Bank Ltd.");
+            System.out.println("********************************");
+            System.out.println("Welcome to the AHT Bank Ltd.");
+            System.out.println("******************************** \n");
+            System.out.println("Your Account Balance Is Low\n");
+            System.out.println("Thank You For Using Our Atm.");
+            System.out.println("******************************** \n");
+            System.out.println("If You Need Any Kind Of Information");
+            System.out.println("Please Call : +8615977208627.");
+            System.out.println("********************************\n");
         }
         System.out.println("");
     }
 
     @FXML
     void balanceTransfer(ActionEvent actionEvent) {
+
+        textareaUI.clear();
+        System.out.println("                       AHT Bank Ltd.");
+        System.out.println("********************************");
+        System.out.println("Welcome to the AHT Bank Ltd.");
+        System.out.println("******************************** \n");
+        System.out.println("Thank You For Using Our Atm.");
+        System.out.println("******************************** \n");
+        System.out.println("If You Need Any Kind Of Information");
+        System.out.println("Please Call : +8615977208627");
+        System.out.println("********************************\n");
+
         checkBalance.setVisible(false);
         depositMoney.setVisible(false);
         balanceTransfer.setVisible(false);
@@ -736,13 +953,25 @@ public class Controller implements Initializable {
         done.setVisible(false);
 
 
+
     }
 
     @FXML
     void transfersubmitbutton(ActionEvent event) {
         try {
             if (transfermoneyfield.getText().isEmpty() || Integer.parseInt(transfermoneyfield.getText()) < 0 || tranferpasswordfield.getText().isEmpty() || accountnumberfield.getText().isEmpty()) {
-                System.out.println("Please Fill Up Everything Correctly.");
+
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("********************************\n");
+                System.out.println("Please Fill Up Everything Correctly.\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("********************************\n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
             } else {
                 connection = DatabaseConnector.getConnection();
                 PreparedStatement pst = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber = '" + cardnumber.getText() + "' and password = '" + tranferpasswordfield.getText() + "' ");
@@ -750,12 +979,27 @@ public class Controller implements Initializable {
                 if (resultSet.next()) {
                     int newbalance = resultSet.getInt("lastamount") - Integer.parseInt(transfermoneyfield.getText());
                     if (newbalance < 0) {
-                        System.out.println("You Dont Have Enough Money To Transfer.");
+
+
+                        textareaUI.clear();
+                        System.out.println("                       AHT Bank Ltd.");
+                        System.out.println("********************************");
+                        System.out.println("Welcome to the AHT Bank Ltd.");
+                        System.out.println("********************************\n");
+                        System.out.println("You Dont Have Enough Money To Transfer.\n");
+                        System.out.println("Thank You For Using Our Atm.");
+                        System.out.println("********************************\n");
+                        System.out.println("If You Need Any Kind Of Information");
+                        System.out.println("Please Call : +8615977208627.");
+                        System.out.println("********************************\n");
+
                         pst.close();
                         resultSet.close();
                     } else {
                         pst = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount = ? WHERE cardnumber = '" + cardnumber.getText() + "' ");
                         pst.setInt(1, newbalance);
+                        lastamountshowfield.setText(String.valueOf(newbalance));
+                        checkbalanceshow.setText(String.valueOf(newbalance));
                         pst.executeUpdate();
                         pst.close();
                         resultSet.close();
@@ -766,6 +1010,23 @@ public class Controller implements Initializable {
                             pst2 = (PreparedStatement) connection.prepareStatement("UPDATE account SET lastamount =? WHERE cardnumber = '" + accountnumberfield.getText() + "' ");
                             pst2.setInt(1, receivernewbalance);
                             pst2.executeUpdate();
+
+
+                            textareaUI.clear();
+                            System.out.println("                       AHT Bank Ltd.");
+                            System.out.println("********************************");
+                            System.out.println("Welcome to the AHT Bank Ltd.");
+                            System.out.println("********************************\n");
+                            System.out.println("Successfully Transferred.");
+                            System.out.println("Your Card Number is : " + cardnumber.getText() + ".");
+                            System.out.println("Transfer Card Number is : " + accountnumberfield.getText() + ".");
+                            System.out.println("Transfer Amount : " + transfermoneyfield.getText() + ".");
+                            System.out.println("Your Current Account balance is : " + checkbalanceshow.getText() + ".\n");
+                            System.out.println("Thank You For Using Our Atm.");
+                            System.out.println("********************************");
+                            System.out.println("If You Need Any Kind Of Information");
+                            System.out.println("Please Call : +8615977208627.");
+                            System.out.println("********************************\n");
 
                             password.setVisible(false);
                             checkBalance.setVisible(true);
@@ -804,12 +1065,23 @@ public class Controller implements Initializable {
                             accountnumberfield.clear();
                             transfermoneyfield.clear();
                             tranferpasswordfield.clear();
+                            PrintButton.setVisible(true);
 
                             pst2.close();
                             resultSet2.close();
-                            System.out.println("Transfer Successfull");
                         } else {
-                            System.out.println("Card Number Invalid , Failed To Transfer.");
+                            textareaUI.clear();
+                            System.out.println("                       AHT Bank Ltd.");
+                            System.out.println("********************************");
+                            System.out.println("Welcome to the AHT Bank Ltd.");
+                            System.out.println("******************************** \n");
+                            System.out.println("Card Number Invalid , Failed To Transfer.\n");
+                            System.out.println("Thank You For Using Our Atm.");
+                            System.out.println("******************************** \n");
+                            System.out.println("If You Need Any Kind Of Information");
+                            System.out.println("Please Call : +8615977208627.");
+                            System.out.println("********************************\n");
+
                             PreparedStatement pst3 = (PreparedStatement) connection.prepareStatement("SELECT * FROM account WHERE cardnumber ='" + cardnumber.getText() + "'");
                             ResultSet resultSet3 = pst3.executeQuery();
                             while (resultSet3.next()) {
@@ -823,17 +1095,48 @@ public class Controller implements Initializable {
                         }
                     }
                 } else {
-                    System.out.println("Wrong Password Transaction Failed.");
+                    textareaUI.clear();
+                    System.out.println("                       AHT Bank Ltd.");
+                    System.out.println("********************************");
+                    System.out.println("Welcome to the AHT Bank Ltd.");
+                    System.out.println("******************************** \n");
+                    System.out.println("Wrong Password Transaction Failed.\n");
+                    System.out.println("Thank You For Using Our Atm.");
+                    System.out.println("******************************** \n");
+                    System.out.println("If You Need Any Kind Of Information");
+                    System.out.println("Please Call : +8615977208627.");
+                    System.out.println("********************************\n");
                 }
                 connection.close();
             }
         } catch (SQLException e) {
-            System.out.println("Invalid Database Or Number Format");
+            textareaUI.clear();
+            System.out.println("                       AHT Bank Ltd.");
+            System.out.println("********************************");
+            System.out.println("Welcome to the AHT Bank Ltd.");
+            System.out.println("******************************** \n");
+            System.out.println("Invalid Database Or Number Format\n");
+            System.out.println("Thank You For Using Our Atm.");
+            System.out.println("******************************** \n");
+            System.out.println("If You Need Any Kind Of Information");
+            System.out.println("Please Call : +8615977208627.");
+            System.out.println("********************************\n");
         }
     }
 
     @FXML
     void changepassword(ActionEvent actionEvent) {
+        textareaUI.clear();
+        System.out.println("                       AHT Bank Ltd.");
+        System.out.println("********************************");
+        System.out.println("Welcome to the AHT Bank Ltd.");
+        System.out.println("******************************** \n");
+        System.out.println("Thank You For Using Our Atm.");
+        System.out.println("******************************** \n");
+        System.out.println("If You Need Any Kind Of Information");
+        System.out.println("Please Call : +8615977208627.");
+        System.out.println("********************************\n");
+
         checkBalance.setVisible(false);
         depositMoney.setVisible(false);
         balanceTransfer.setVisible(false);
@@ -864,6 +1167,7 @@ public class Controller implements Initializable {
         informationlabel2.setVisible(false);
         informationlabel3.setVisible(false);
         done.setVisible(false);
+        PrintButton.setVisible(false);
 
     }
 
@@ -876,7 +1180,17 @@ public class Controller implements Initializable {
 
         try {
             if (oldpasswordfield.getText().isEmpty() || newpasswordfield.getText().isEmpty() || retypepasswordfield.getText().isEmpty()) {
-                System.out.println("Please fill your password correctly");
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("******************************** \n");
+                System.out.println("Please fill your password correctly\n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("******************************** \n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
             } else {
                 pst = (PreparedStatement) connection.prepareStatement(sql);
                 PreparedStatement pst2 = (PreparedStatement) connection.prepareStatement(sql2);
@@ -885,8 +1199,23 @@ public class Controller implements Initializable {
                 int numRowsChanged2 = pst2.executeUpdate();
 
                 if (resultSet.next() || oldpasswordfield.getText().equals(password.getText()) || newpasswordfield.getText().equals(retypepasswordfield.getText())) {
-                    System.out.println("ok");
+                    System.out.println(" ");
                 }
+                textareaUI.clear();
+                System.out.println("                       AHT Bank Ltd.");
+                System.out.println("********************************");
+                System.out.println("Welcome to the AHT Bank Ltd.");
+                System.out.println("******************************** \n");
+                System.out.println("Card Number : " + cardnumber.getText());
+                System.out.println("Password Has Been Changed. \n");
+                System.out.println("Thank You For Using Our Atm.");
+                System.out.println("******************************** \n");
+                System.out.println("If You Need Any Kind Of Information");
+                System.out.println("Please Call : +8615977208627.");
+                System.out.println("********************************\n");
+
+
+
                 checkBalance.setVisible(true);
                 depositMoney.setVisible(true);
                 balanceTransfer.setVisible(true);
@@ -913,10 +1242,21 @@ public class Controller implements Initializable {
                 newpasswordfield.clear();
                 retypepasswordfield.clear();
                 done.setVisible(false);
+                PrintButton.setVisible(false);
 
             }
         } catch (SQLException e) {
-            System.out.println("Please fill your password correctly");
+            textareaUI.clear();
+            System.out.println("                       AHT Bank Ltd.");
+            System.out.println("********************************");
+            System.out.println("Welcome to the AHT Bank Ltd.");
+            System.out.println("******************************** \n");
+            System.out.println("Please fill your password correctly\n");
+            System.out.println("Thank You For Using Our Atm.");
+            System.out.println("******************************** \n");
+            System.out.println("If You Need Any Kind Of Information");
+            System.out.println("Please Call : +8615977208627.");
+            System.out.println("********************************\n");
         }
         System.out.println("");
     }
@@ -953,7 +1293,28 @@ public class Controller implements Initializable {
         informationlabel2.setVisible(true);
         informationlabel3.setVisible(true);
         done.setVisible(false);
+        PrintButton.setVisible(false);
+
+        textareaUI.clear();
+        System.out.println("                       AHT Bank Ltd.");
+        System.out.println("********************************");
+        System.out.println("Welcome to the AHT Bank Ltd.");
+        System.out.println("******************************** \n");
+        System.out.println("Thank You For Using Our Atm.");
+        System.out.println("******************************** \n");
+        System.out.println("If You Need Any Kind Of Information");
+        System.out.println("Please Call : +8615977208627.");
+        System.out.println("********************************\n");
     }
+
+    @FXML
+    void PrintButtonHandler(ActionEvent event) {
+
+
+
+    }
+
+
 
 
 }

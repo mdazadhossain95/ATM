@@ -17,6 +17,7 @@
       <w>depositsubmitnutton</w>
       <w>dropshadow</w>
       <w>enterbutton</w>
+      <w>getrecipetbutton</w>
       <w>informationlabel</w>
       <w>keytype</w>
       <w>lastamount</w>
@@ -28,6 +29,8 @@
       <w>newpasswordlabel</w>
       <w>oldpasswordfield</w>
       <w>oldpasswordlabel</w>
+      <w>pipedinputstream</w>
+      <w>printbutton</w>
       <w>receivernewbalance</w>
       <w>retypepasswordfield</w>
       <w>retypepasswordlabel</w>

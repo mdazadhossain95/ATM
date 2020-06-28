@@ -19,15 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="try to add new keyboard and attach with button">
-      <change afterPath="$PROJECT_DIR$/src/StyleSheet/AnchorPane.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StyleSheet/labelstyle.css" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="create new css files">
+      <change afterPath="$PROJECT_DIR$/src/sample/ReaderThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mdaza.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mdaza.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StyleSheet/textfieldstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/StyleSheet/textfieldstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StyleSheet/AnchorPane.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/StyleSheet/AnchorPane.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
@@ -86,6 +85,7 @@
       <list>
         <option value="module-info" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -273,7 +273,8 @@
       <workItem from="1593084167586" duration="594000" />
       <workItem from="1593085949862" duration="16461000" />
       <workItem from="1593163670716" duration="30295000" />
-      <workItem from="1593254737756" duration="12458000" />
+      <workItem from="1593254737756" duration="12616000" />
+      <workItem from="1593345891736" duration="26480000" />
     </task>
     <task id="LOCAL-00001" summary="new update deleted old files reform project">
       <created>1592838093887</created>
@@ -408,7 +409,21 @@
       <option name="project" value="LOCAL" />
       <updated>1593204318247</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="create new css files">
+      <created>1593294498262</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1593294498321</updated>
+    </task>
+    <task id="LOCAL-00021" summary="create new css files">
+      <created>1593294540942</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1593294540942</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +460,8 @@
     <MESSAGE value="picture position change" />
     <MESSAGE value="update change password button source code" />
     <MESSAGE value="try to add new keyboard and attach with button" />
-    <option name="LAST_COMMIT_MESSAGE" value="try to add new keyboard and attach with button" />
+    <MESSAGE value="create new css files" />
+    <option name="LAST_COMMIT_MESSAGE" value="create new css files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="364" y="111" key="#Inspections" timestamp="1593165353219">
@@ -464,6 +480,14 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="192" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1474.864@0.0.1474.864" timestamp="1592837339905" />
+    <state x="791" y="295" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1593368052663">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="791" y="295" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1474.864@0.0.1474.864" timestamp="1593368052663" />
+    <state x="911" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1593347166394">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="911" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1474.864@0.0.1474.864" timestamp="1593347166394" />
     <state x="468" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592827770627">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
@@ -480,22 +504,22 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="467" y="34" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1592834332608" />
-    <state width="1431" height="209" key="GridCell.Tab.0.bottom" timestamp="1593291616714">
+    <state width="692" height="198" key="GridCell.Tab.0.bottom" timestamp="1593380974763">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="209" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1593291616714" />
-    <state width="1431" height="209" key="GridCell.Tab.0.center" timestamp="1593291616714">
+    <state width="692" height="198" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1593380974763" />
+    <state width="692" height="198" key="GridCell.Tab.0.center" timestamp="1593380974762">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="209" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1593291616714" />
-    <state width="1431" height="209" key="GridCell.Tab.0.left" timestamp="1593291616714">
+    <state width="692" height="198" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1593380974762" />
+    <state width="692" height="198" key="GridCell.Tab.0.left" timestamp="1593380974762">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="209" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1593291616714" />
-    <state width="1431" height="209" key="GridCell.Tab.0.right" timestamp="1593291616714">
+    <state width="692" height="198" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1593380974762" />
+    <state width="692" height="198" key="GridCell.Tab.0.right" timestamp="1593380974762">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="209" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1593291616714" />
+    <state width="692" height="198" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1593380974762" />
     <state width="1431" height="277" key="GridCell.Tab.1.bottom" timestamp="1593116618212">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
@@ -516,10 +540,10 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="218" y="6" key="SettingsEditor/0.0.1474.864@0.0.1474.864" timestamp="1592828891288" />
-    <state x="242" y="225" key="Vcs.Push.Dialog.v2" timestamp="1593204320403">
+    <state x="348" y="162" key="Vcs.Push.Dialog.v2" timestamp="1593294544402">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="242" y="225" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1593204320403" />
+    <state x="348" y="162" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1593294544402" />
     <state x="178" y="53" key="new project wizard" timestamp="1592834352516">
       <screen x="0" y="0" width="1474" height="864" />
     </state>

@@ -1,6 +1,5 @@
 package Database;
 
-import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -17,11 +16,10 @@ public class DatabaseConnector {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/atm", "root", "");
 //            JOptionPane.showMessageDialog(null,"Connection Established");
-            System.out.println("Connection Established");
             return connection;
         } catch (Exception e) {
-//            e.printStackTrace();
-            JOptionPane.showMessageDialog(null,"Connection not Established");
+//            JOptionPane.showMessageDialog(null,"Connection not Established");
+
             return null;
         }
 
