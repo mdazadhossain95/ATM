@@ -19,14 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="create new css files">
-      <change afterPath="$PROJECT_DIR$/src/sample/ReaderThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mdaza.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mdaza.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="create new ReadThread.java file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StyleSheet/AnchorPane.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/StyleSheet/AnchorPane.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ATM/Database/DatabaseConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/Database/DatabaseConnector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ATM/StyleSheet/AnchorPane.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/StyleSheet/AnchorPane.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ATM/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM/sample/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
@@ -274,7 +274,8 @@
       <workItem from="1593085949862" duration="16461000" />
       <workItem from="1593163670716" duration="30295000" />
       <workItem from="1593254737756" duration="12616000" />
-      <workItem from="1593345891736" duration="26480000" />
+      <workItem from="1593345891736" duration="26693000" />
+      <workItem from="1593413338523" duration="10602000" />
     </task>
     <task id="LOCAL-00001" summary="new update deleted old files reform project">
       <created>1592838093887</created>
@@ -423,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593294540942</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="create new ReadThread.java file">
+      <created>1593382156239</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1593382156239</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +469,8 @@
     <MESSAGE value="update change password button source code" />
     <MESSAGE value="try to add new keyboard and attach with button" />
     <MESSAGE value="create new css files" />
-    <option name="LAST_COMMIT_MESSAGE" value="create new css files" />
+    <MESSAGE value="create new ReadThread.java file" />
+    <option name="LAST_COMMIT_MESSAGE" value="create new ReadThread.java file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="364" y="111" key="#Inspections" timestamp="1593165353219">
@@ -500,26 +509,30 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="533" y="302" key="DetectedRootsChooserDialog/0.0.1474.864@0.0.1474.864" timestamp="1592809472562" />
+    <state x="830" y="93" width="551" height="678" key="DiffContextDialog" timestamp="1593432358839">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="830" y="93" width="551" height="678" key="DiffContextDialog/0.0.1474.864@0.0.1474.864" timestamp="1593432358839" />
     <state x="467" y="34" key="FileChooserDialogImpl" timestamp="1592834332608">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="467" y="34" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1592834332608" />
-    <state width="692" height="198" key="GridCell.Tab.0.bottom" timestamp="1593380974763">
+    <state width="693" height="202" key="GridCell.Tab.0.bottom" timestamp="1593464332754">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="692" height="198" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1593380974763" />
-    <state width="692" height="198" key="GridCell.Tab.0.center" timestamp="1593380974762">
+    <state width="693" height="202" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1593464332754" />
+    <state width="693" height="202" key="GridCell.Tab.0.center" timestamp="1593464332754">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="692" height="198" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1593380974762" />
-    <state width="692" height="198" key="GridCell.Tab.0.left" timestamp="1593380974762">
+    <state width="693" height="202" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1593464332754" />
+    <state width="693" height="202" key="GridCell.Tab.0.left" timestamp="1593464332746">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="692" height="198" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1593380974762" />
-    <state width="692" height="198" key="GridCell.Tab.0.right" timestamp="1593380974762">
+    <state width="693" height="202" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1593464332746" />
+    <state width="693" height="202" key="GridCell.Tab.0.right" timestamp="1593464332754">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="692" height="198" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1593380974762" />
+    <state width="693" height="202" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1593464332754" />
     <state width="1431" height="277" key="GridCell.Tab.1.bottom" timestamp="1593116618212">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
@@ -540,10 +553,10 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="218" y="6" key="SettingsEditor/0.0.1474.864@0.0.1474.864" timestamp="1592828891288" />
-    <state x="348" y="162" key="Vcs.Push.Dialog.v2" timestamp="1593294544402">
+    <state x="348" y="162" key="Vcs.Push.Dialog.v2" timestamp="1593382162027">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="348" y="162" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1593294544402" />
+    <state x="348" y="162" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1593382162027" />
     <state x="178" y="53" key="new project wizard" timestamp="1592834352516">
       <screen x="0" y="0" width="1474" height="864" />
     </state>

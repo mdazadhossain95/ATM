@@ -285,11 +285,11 @@
          </font>
       </Label>
       <TextField fx:id="password" layoutX="184.0" layoutY="226.0" promptText="Enter the password" stylesheets="@../StyleSheet/textfieldstyle.css" />
-      <TextArea fx:id="textareaUI" layoutX="446.0" layoutY="327.0" prefHeight="294.0" prefWidth="289.0">
+      <TextArea fx:id="textareaUI" layoutX="500.0" layoutY="350.0" prefHeight="294.0" prefWidth="289.0" AnchorPane.bottomAnchor="78.60000000000002" AnchorPane.leftAnchor="446.0" AnchorPane.rightAnchor="14.399999999999977" AnchorPane.topAnchor="327.0">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </TextArea>
-      <Button fx:id="PrintButton" layoutX="446.0" layoutY="624.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="290.0" text="Print" textFill="#0646f8" />
+      <Button fx:id="PrintButton" layoutX="446.0" layoutY="624.0" mnemonicParsing="false" onAction="#PrintButtonHandler" prefHeight="32.0" prefWidth="290.0" text="Print" textFill="#0646f8" />
     </children>
 </AnchorPane>

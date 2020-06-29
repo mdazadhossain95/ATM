@@ -90,7 +90,4 @@ public class Main extends Application {
         ReaderThread obj = new ReaderThread(pipeIn, pipeIn2, errorThrower, reader, reader2, quit, txtArea);
 
     }
-
-
-
 }

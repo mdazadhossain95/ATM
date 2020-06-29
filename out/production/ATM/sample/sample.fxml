@@ -200,7 +200,7 @@
       <Button fx:id="changepassword" layoutX="104.0" layoutY="190.0" mnemonicParsing="false" onAction="#changepassword" prefHeight="32.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Change Password" />
       <Button fx:id="information" layoutX="305.0" layoutY="190.0" mnemonicParsing="false" onAction="#information" prefHeight="31.0" prefWidth="130.0" stylesheets="@../StyleSheet/buttonstyle.css" text="information" />
       <Button fx:id="done" layoutX="661.0" layoutY="289.0" mnemonicParsing="false" onAction="#cardnumberdone" prefHeight="32.0" prefWidth="70.0" text="Done" />
-      <Label fx:id="label1" layoutX="154.0" layoutY="63.0" prefHeight="30.0" prefWidth="223.0" stylesheets="@../StyleSheet/labelstyle.css" text="Your Account Balance is">
+      <Label fx:id="label1" layoutX="154.0" layoutY="97.0" prefHeight="30.0" prefWidth="223.0" stylesheets="@../StyleSheet/labelstyle.css" text="Current Account Balance">
          <font>
             <Font size="20.0" />
          </font>
@@ -269,27 +269,27 @@
       <TextField fx:id="lastamountshowfield" layoutX="268.0" layoutY="62.0" prefHeight="32.0" prefWidth="149.0" stylesheets="@../StyleSheet/textfieldstyle.css" />
       <Button fx:id="withdrawsubmit" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#withdrawsubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
       <Button fx:id="transferbutton" layoutX="343.0" layoutY="253.0" mnemonicParsing="false" onAction="#transfersubmitbutton" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/buttonstyle.css" text="Submit" />
-      <Label fx:id="informationlabel1" layoutX="150.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" stylesheets="@../StyleSheet/labelstyle.css" text="If you need any kind of information" textAlignment="CENTER">
+      <Label fx:id="informationlabel1" layoutX="151.0" layoutY="95.0" prefHeight="31.0" prefWidth="234.0" stylesheets="@../StyleSheet/labelstyle.css" text="If You Need Any Kind Of Information" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="informationlabel2" layoutX="223.0" layoutY="126.0" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/labelstyle.css" text="Please call" textAlignment="CENTER">
+      <Label fx:id="informationlabel2" layoutX="223.0" layoutY="126.0" prefHeight="31.0" prefWidth="70.0" stylesheets="@../StyleSheet/labelstyle.css" text="Please Call" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="informationlabel3" layoutX="182.0" layoutY="187.0" prefHeight="39.0" prefWidth="130.0" stylesheets="@../StyleSheet/labelstyle.css" text="+8615977208627">
+      <Label fx:id="informationlabel3" layoutX="190.0" layoutY="155.0" prefHeight="39.0" prefWidth="130.0" stylesheets="@../StyleSheet/labelstyle.css" text="+8615977208627">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
       <TextField fx:id="password" layoutX="184.0" layoutY="226.0" promptText="Enter the password" stylesheets="@../StyleSheet/textfieldstyle.css" />
-      <TextArea layoutX="446.0" layoutY="327.0" prefHeight="294.0" prefWidth="289.0">
+      <TextArea fx:id="textareaUI" layoutX="500.0" layoutY="350.0" prefHeight="294.0" prefWidth="289.0" AnchorPane.bottomAnchor="78.60000000000002" AnchorPane.leftAnchor="446.0" AnchorPane.rightAnchor="14.399999999999977" AnchorPane.topAnchor="327.0">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </TextArea>
-      <Button layoutX="670.0" layoutY="633.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Print" />
+      <Button fx:id="PrintButton" layoutX="446.0" layoutY="624.0" mnemonicParsing="false" onAction="#PrintButtonHandler" prefHeight="32.0" prefWidth="290.0" text="Print" textFill="#0646f8" />
     </children>
 </AnchorPane>

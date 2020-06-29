@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.print.PrinterJob;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -175,7 +176,6 @@ public class Controller implements Initializable {
 
     @FXML
     public Button PrintButton;
-
 
 
     Connection connection = null;
@@ -403,6 +403,7 @@ public class Controller implements Initializable {
     }
     @FXML
     void handleButtonAction1(KeyEvent keyEvent) {
+
         switch (keyEvent.getCode()) {
             case DIGIT1:
                 System.out.println("1");
@@ -1309,12 +1310,25 @@ public class Controller implements Initializable {
 
     @FXML
     void PrintButtonHandler(ActionEvent event) {
-
-
-
+        PrintButton.setOnAction(e -> print(textareaUI));
     }
 
+    private void print(Node node) {
+//        System.out.println("Creating a printer job...");
 
 
+        PrinterJob job = PrinterJob.createPrinterJob();
+        if (job != null) {
+            System.out.println(job.jobStatusProperty().asString());
 
+            boolean printed = job.printPage(textareaUI);
+            if (printed) {
+                job.endJob();
+            } else {
+                System.out.println("Printing failed.");
+            }
+        } else {
+            System.out.println("Could not create a printer job.");
+        }
+    }
 }
